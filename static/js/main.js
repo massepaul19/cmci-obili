@@ -1,5 +1,34 @@
 // main.js - Fichier principal pour le site CMCI OBILI
-// Version CORRIGÉE - Logo fonctionnel partout
+// Version CORRIGÉE - Logo fonctionnel partout + Thèmes persistants
+
+// ========================================
+// SYSTÈME DE THÈMES - PERSISTANCE
+// ========================================
+
+function changeTheme(theme) {
+    console.log('🎨 Changement vers:', theme);
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('cmci-theme', theme);
+    console.log('💾 Sauvegardé:', localStorage.getItem('cmci-theme'));
+}
+
+function loadSavedTheme() {
+    const savedTheme = localStorage.getItem('cmci-theme') || 'green';
+    console.log('📦 Chargement du thème:', savedTheme);
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Mettre à jour le sélecteur après un court délai
+    setTimeout(() => {
+        const themeSelector = document.getElementById('themeSelector');
+        if (themeSelector) {
+            themeSelector.value = savedTheme;
+            console.log('✅ Sélecteur mis à jour:', savedTheme);
+        }
+    }, 100);
+}
+
+// Charger immédiatement
+loadSavedTheme();
 
 // ========================================
 // PARTIE 1: GÉNÉRATION DES COMPOSANTS
@@ -88,8 +117,19 @@ function getSidebar() {
         <div class="sidebar-divider"></div>
 
         <!-- Section Thèmes -->
-        <div class="sidebar-section-title">
-            <i class="fas fa-bars"></i> Thèmes
+        <div class="sidebar-section d-flex align-items-center justify-content-between mb-3">
+          <div class="sidebar-section-title d-flex align-items-center">
+            <i class="fas fa-bars me-2"></i>
+            <span>Thèmes</span>
+          </div>
+
+          <!-- Sélecteur de thème -->
+          <select class="form-select theme-selector ms-2" id="themeSelector" onchange="changeTheme(this.value)" style="width: 110px;">
+            <option value="green">🟢 Vert</option>
+            <option value="blue">🔵 Bleu</option>
+            <option value="white">⚪ Blanc</option>
+            <option value="black">⚫ Noir</option>
+          </select>
         </div>
 
         <div class="menu-item">
@@ -236,16 +276,16 @@ function getFooter() {
             </div>
              <div class="footer-bottom">
                     <div class="col-12 col-md-6 text-center text-md-end">
-		  <p>
-		    « Il y a diversité de dons, mais le même Esprit ; diversité de services, mais le même Seigneur.  
-		    Ensemble, nous formons un seul corps pour la gloire de Dieu. »  
-		    
-              	<br><em>— 1 Corinthiens 12:4-5</em><br>
-		  </p>
-              	  </div>
+          <p>
+            « Il y a diversité de dons, mais le même Esprit ; diversité de services, mais le même Seigneur.  
+            Ensemble, nous formons un seul corps pour la gloire de Dieu. »  
+            
+                  <br><em>— 1 Corinthiens 12:4-5</em><br>
+          </p>
+                  </div>
               </div>
               <div class="footer-bottom">
-		     <i class="fas fa-heart" style="color: #c6d647;"></i> Toute la gloire à Dieu.
+             <i class="fas fa-heart" style="color: #c6d647;"></i> Toute la gloire à Dieu.
             </div>
         </div>
     </footer>
@@ -258,6 +298,9 @@ function getFooter() {
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🚀 CMCI OBILI - Démarrage...');
+    
+    // CHARGER LE THÈME EN PREMIER
+    loadSavedTheme();
     
     // Charger les composants
     const headerPlaceholder = document.getElementById('header-placeholder');
@@ -278,8 +321,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('✅ Footer chargé');
     }
     
-    // Initialiser après chargement
-    setTimeout(initializeApp, 200);
+    // Réappliquer le thème après chargement du header
+    setTimeout(() => {
+        loadSavedTheme();
+        initializeApp();
+    }, 200);
 });
 
 // ========================================

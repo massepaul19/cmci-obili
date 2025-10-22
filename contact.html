@@ -6,7 +6,7 @@
     <title data-translate="page.title">Contact - CMCI OBILI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/style_contact.css">
     
     <!-- EmailJS SDK -->
@@ -89,20 +89,20 @@
                 <!-- Réseaux sociaux -->
                 <div class="social-section">
                     <h3><i class="fas fa-share-alt"></i> <span data-translate="contact.social">Suivez-nous</span></h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link facebook" target="_blank" title="Facebook">
+                    <div class="contact-social-links">
+                        <a href="#" class="contact-social-link facebook" target="_blank" title="Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="social-link youtube" target="_blank" title="YouTube">
+                        <a href="#" class="contact-social-link youtube" target="_blank" title="YouTube">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="#" class="social-link instagram" target="_blank" title="Instagram">
+                        <a href="#" class="contact-social-link instagram" target="_blank" title="Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="social-link twitter" target="_blank" title="Twitter">
+                        <a href="#" class="contact-social-link twitter" target="_blank" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link whatsapp" target="_blank" title="WhatsApp">
+                        <a href="#" class="contact-social-link whatsapp" target="_blank" title="WhatsApp">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -125,43 +125,39 @@
                 </h2>
                 <div class="section-divider"></div>
                 
-                <form id="contactForm">
+                <form id="contactForm" class="contact-form">
                     <div class="mb-3">
-                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                        <label class="form-label-custom">
                             <i class="fas fa-user"></i> <span data-translate="contact.form.name">Nom complet</span> *
                         </label>
-                        <input type="text" name="from_name" class="form-control" 
+                        <input type="text" name="from_name" class="form-control-custom" 
                                data-translate-placeholder="contact.form.name.placeholder"
-                               placeholder="Votre nom complet" required 
-                               style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                               placeholder="Votre nom complet" required>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                        <label class="form-label-custom">
                             <i class="fas fa-envelope"></i> <span data-translate="contact.form.email">Email</span> *
                         </label>
-                        <input type="email" name="from_email" class="form-control" 
+                        <input type="email" name="from_email" class="form-control-custom" 
                                data-translate-placeholder="contact.form.email.placeholder"
-                               placeholder="votre@email.com" required 
-                               style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                               placeholder="votre@email.com" required>
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                        <label class="form-label-custom">
                             <i class="fas fa-phone"></i> <span data-translate="contact.form.phone">Téléphone (optionnel)</span>
                         </label>
-                        <input type="tel" name="phone" class="form-control" 
+                        <input type="tel" name="phone" class="form-control-custom" 
                                data-translate-placeholder="contact.form.phone.placeholder"
-                               placeholder="+237 XXX XXX XXX" 
-                               style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                               placeholder="+237 XXX XXX XXX">
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                        <label class="form-label-custom">
                             <i class="fas fa-tag"></i> <span data-translate="contact.form.subject">Sujet</span> *
                         </label>
-                        <select name="subject" class="form-control" required 
-                                style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                        <select name="subject" class="form-control-custom" required>
                             <option value="" data-translate="contact.form.subject.select">Sélectionnez un sujet</option>
                             <option value="information" data-translate="contact.form.subject.info">Demande d'information</option>
                             <option value="priere" data-translate="contact.form.subject.prayer">Demande de prière</option>
@@ -175,18 +171,17 @@
                     </div>
                     
                     <div class="mb-3">
-                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                        <label class="form-label-custom">
                             <i class="fas fa-comment"></i> <span data-translate="contact.form.message">Message</span> *
                         </label>
-                        <textarea name="message" class="form-control" rows="5" 
+                        <textarea name="message" class="form-control-custom" rows="5" 
                                   data-translate-placeholder="contact.form.message.placeholder"
-                                  placeholder="Votre message..." required 
-                                  style="border: 2px solid var(--primary-green); border-radius: 8px;"></textarea>
+                                  placeholder="Votre message..." required></textarea>
                     </div>
                     
-                    <button type="submit" id="submitBtn" class="btn btn-lg w-100" 
-                            style="background: var(--primary-green); color: white; border-radius: 25px; font-weight: bold; border: none; transition: all 0.3s ease;">
-                        <i class="fas fa-paper-plane"></i> <span data-translate="contact.form.submit">Envoyer le message</span>
+                    <button type="submit" id="submitBtn" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> 
+                        <span data-translate="contact.form.submit">Envoyer le message</span>
                     </button>
                 </form>
             </div>
@@ -199,7 +194,7 @@
                 <i class="fas fa-map-marker-alt"></i> <span data-translate="contact.map.title">Notre Localisation</span>
                 <span class="accent-dot"></span>
             </h2>
-            <p style="color: #555;" data-translate="contact.map.subtitle">Retrouvez-nous au cœur d'Obili, Yaoundé</p>
+            <p class="map-subtitle" data-translate="contact.map.subtitle">Retrouvez-nous au cœur d'Obili, Yaoundé</p>
             <div class="section-divider"></div>
 
             <div class="map-container" id="map">
@@ -207,7 +202,7 @@
                     <i class="fas fa-map-marked-alt"></i>
                     <h4>CMCI OBILI</h4>
                     <p data-translate="contact.map.location">Quartier Obili, Yaoundé, Cameroun</p>
-                    <button class="directions-btn" onclick="loadGoogleMap()">
+                    <button class="btn-map" onclick="loadGoogleMap()">
                         <i class="fas fa-map"></i>
                         <span data-translate="contact.map.load">Charger la carte</span>
                     </button>
@@ -245,12 +240,12 @@
                 </div>
             </div>
 
-            <div style="margin-top: 25px; text-align: center;">
-                <a href="https://www.google.com/maps/dir//3.8546926,11.4898802" target="_blank" rel="noopener noreferrer" class="directions-btn">
+            <div class="map-actions">
+                <a href="https://www.google.com/maps/dir//3.8546926,11.4898802" target="_blank" rel="noopener noreferrer" class="btn-map">
                     <i class="fas fa-route"></i>
                     <span data-translate="contact.map.directions">Obtenir l'itinéraire</span>
                 </a>
-                <a href="https://www.google.com/maps/place/3.8546926,11.4898802" target="_blank" rel="noopener noreferrer" class="directions-btn" style="margin-left: 10px;">
+                <a href="https://www.google.com/maps/place/3.8546926,11.4898802" target="_blank" rel="noopener noreferrer" class="btn-map">
                     <i class="fas fa-external-link-alt"></i>
                     <span data-translate="contact.map.view">Voir sur Google Maps</span>
                 </a>

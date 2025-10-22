@@ -6,7 +6,7 @@
     <title data-translate="page.title">Accueil - CMCI OBILI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <!-- HEADER (chargé automatiquement) -->
@@ -53,19 +53,19 @@
             </p>
             <ul style="color: #555; line-height: 2;">
                 <li>
-                    <strong style="color: var(--primary-green);" data-translate="home.values.faith">La Foi</strong> 
+                    <strong style="color: var(--primary-color);" data-translate="home.values.faith">La Foi</strong> 
                     - <span data-translate="home.values.faith.desc">Fondée sur la Parole de Dieu</span>
                 </li>
                 <li>
-                    <strong style="color: var(--primary-green);" data-translate="home.values.love">L'Amour</strong> 
+                    <strong style="color: var(--primary-color);" data-translate="home.values.love">L'Amour</strong> 
                     - <span data-translate="home.values.love.desc">Envers Dieu et notre prochain</span>
                 </li>
                 <li>
-                    <strong style="color: var(--primary-green);" data-translate="home.values.communion">La Communion</strong> 
+                    <strong style="color: var(--primary-color);" data-translate="home.values.communion">La Communion</strong> 
                     - <span data-translate="home.values.communion.desc">Un corps uni en Christ</span>
                 </li>
                 <li>
-                    <strong style="color: var(--primary-green);" data-translate="home.values.service">Le Service</strong> 
+                    <strong style="color: var(--primary-color);" data-translate="home.values.service">Le Service</strong> 
                     - <span data-translate="home.values.service.desc">Servir avec nos dons et talents</span>
                 </li>
             </ul>
@@ -84,31 +84,31 @@
             </p>
             <div class="row mt-4">
                 <div class="col-md-6 mb-3">
-                    <div style="background: rgba(61, 155, 143, 0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-yellow);">
-                        <h5 style="color: var(--primary-green);">
+                    <div class="worship-schedule-card">
+                        <h5>
                             <i class="fas fa-calendar-day"></i> 
                             <span data-translate="home.worship.sunday">Dimanche</span>
                         </h5>
-                        <p style="margin: 5px 0; color: #555;">
+                        <p class="time-info">
                             <i class="fas fa-clock"></i> 
                             <span data-translate="home.worship.sunday.time">9h00 - 12h00</span>
                         </p>
-                        <p style="margin: 0; color: #555;" data-translate="home.worship.sunday.desc">
+                        <p class="description" data-translate="home.worship.sunday.desc">
                             Culte principal avec prédication
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <div style="background: rgba(61, 155, 143, 0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-yellow);">
-                        <h5 style="color: var(--primary-green);">
+                    <div class="worship-schedule-card">
+                        <h5>
                             <i class="fas fa-calendar-week"></i> 
                             <span data-translate="home.worship.wednesday">Mercredi</span>
                         </h5>
-                        <p style="margin: 5px 0; color: #555;">
+                        <p class="time-info">
                             <i class="fas fa-clock"></i> 
                             <span data-translate="home.worship.wednesday.time">18h00 - 20h00</span>
                         </p>
-                        <p style="margin: 0; color: #555;" data-translate="home.worship.wednesday.desc">
+                        <p class="description" data-translate="home.worship.wednesday.desc">
                             Étude biblique et prière
                         </p>
                     </div>
@@ -129,23 +129,24 @@
                 en Christ.
             </p>
             <div class="text-center mt-4">
-                <a href="contact.html" class="btn btn-lg" style="background: var(--primary-green); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
-                    <i class="fas fa-envelope"></i> <span data-translate="home.join.button">Contactez-nous</span>
+                <a href="contact.html" class="btn-contact">
+                    <i class="fas fa-envelope"></i> 
+                    <span data-translate="home.join.button">Contactez-nous</span>
                 </a>
             </div>
         </div>
 
-        <div class="content-card" style="background: linear-gradient(135deg, var(--primary-green), var(--light-green)); color: white; border-left: 4px solid var(--accent-yellow);">
-            <h2 style="color: var(--accent-yellow);">
+        <div class="content-card verse-card">
+            <h2>
                 <i class="fas fa-bible"></i> 
                 <span data-translate="home.verse.title">Verset du Jour</span>
             </h2>
-            <div class="section-divider" style="background: rgba(255,255,255,0.3);"></div>
-            <p style="font-size: 18px; font-style: italic; color: white;" data-translate="home.verse.text">
+            <div class="section-divider verse-divider"></div>
+            <p class="verse-text" data-translate="home.verse.text">
                 "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui 
                 ne périsse point, mais qu'il ait la vie éternelle."
             </p>
-            <p style="text-align: right; color: var(--accent-yellow); font-weight: bold;">
+            <p class="verse-reference">
                 - <span data-translate="home.verse.reference">Jean 3:16</span>
             </p>
         </div>
@@ -153,6 +154,145 @@
 
     <!-- FOOTER (chargé automatiquement) -->
     <div id="footer-placeholder"></div>
+
+    <!-- Styles additionnels pour cette page -->
+    <style>
+        /* Cartes de planning de culte */
+        .worship-schedule-card {
+            background: var(--hover-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 3px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .worship-schedule-card:hover {
+            background: var(--light-bg);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .worship-schedule-card h5 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .worship-schedule-card h5 i {
+            color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        .worship-schedule-card .time-info {
+            margin: 5px 0;
+            color: var(--dark-text);
+            font-weight: 500;
+        }
+
+        .worship-schedule-card .time-info i {
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+
+        .worship-schedule-card .description {
+            margin: 0;
+            color: var(--dark-text);
+            opacity: 0.8;
+        }
+
+        /* Bouton de contact */
+        .btn-contact {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 10px var(--shadow-color);
+        }
+
+        .btn-contact:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px var(--shadow-color);
+        }
+
+        .btn-contact i {
+            margin-right: 8px;
+        }
+
+        /* Carte du verset */
+        .verse-card {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light)) !important;
+            color: white;
+            border-left: 4px solid var(--accent-color) !important;
+        }
+
+        .verse-card h2 {
+            color: var(--accent-color) !important;
+        }
+
+        .verse-card h2 i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        .verse-divider {
+            background: rgba(255, 255, 255, 0.3) !important;
+        }
+
+        .verse-text {
+            font-size: 18px;
+            font-style: italic;
+            color: white !important;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .verse-reference {
+            text-align: right;
+            color: var(--accent-color) !important;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Thème noir - adaptations spécifiques */
+        [data-theme="black"] .worship-schedule-card {
+            background: var(--medium-bg);
+        }
+
+        [data-theme="black"] .worship-schedule-card:hover {
+            background: var(--hover-bg);
+        }
+
+        [data-theme="black"] .worship-schedule-card .time-info,
+        [data-theme="black"] .worship-schedule-card .description {
+            color: var(--dark-text);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .worship-schedule-card {
+                padding: 15px;
+            }
+
+            .worship-schedule-card h5 {
+                font-size: 16px;
+            }
+
+            .verse-text {
+                font-size: 16px;
+            }
+
+            .btn-contact {
+                padding: 10px 25px;
+                font-size: 14px;
+            }
+        }
+    </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/translator.js"></script>
