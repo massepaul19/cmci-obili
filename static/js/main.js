@@ -225,15 +225,27 @@ function getFooter() {
                         <li><i class="fas fa-map-marker-alt"></i><span>Obili, Yaoundé, Cameroun</span></li>
                         <li><i class="fas fa-phone"></i><span>+237 XXX XXX XXX</span></li>
                         <li><i class="fas fa-envelope"></i><span>contact@cmciobili.org</span></li>
-                        <li><i class="fas fa-clock"></i><span>Cultes: Dimanche 9h - 12h</span></li>
+                        <li><i class="fas fa-clock"></i><span>Cultes: Dimanche 8h - 12h</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="row">
                     <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0"><p>&copy; 2025 CMCI OBILI. Tous droits réservés.</p></div>
-                    <div class="col-12 col-md-6 text-center text-md-end"><p>Développé avec <i class="fas fa-heart" style="color: #c6d647;"></i> pour la gloire de Dieu</p></div>
-                </div>
+                 </div>
+            </div>
+             <div class="footer-bottom">
+                    <div class="col-12 col-md-6 text-center text-md-end">
+		  <p>
+		    « Il y a diversité de dons, mais le même Esprit ; diversité de services, mais le même Seigneur.  
+		    Ensemble, nous formons un seul corps pour la gloire de Dieu. »  
+		    
+              	<br><em>— 1 Corinthiens 12:4-5</em><br>
+		  </p>
+              	  </div>
+              </div>
+              <div class="footer-bottom">
+		     <i class="fas fa-heart" style="color: #c6d647;"></i> Toute la gloire à Dieu.
             </div>
         </div>
     </footer>
