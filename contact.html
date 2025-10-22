@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">Contact - CMCI OBILI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style2.css">
+    <link rel="stylesheet" href="static/css/style_contact.css">
+    
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header-placeholder"></div>
+
+    <!-- Bouton Menu -->
+    <button class="menu-toggle" id="menuToggle"></button>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="content-area" id="contentArea">
+        <div class="welcome-text">
+            <h1>
+                <span class="accent-dot"></span> 
+                💬 <span data-translate="contact.title">Contactez-nous</span>
+                <span class="accent-dot"></span>
+            </h1>
+            <p data-translate="contact.intro">
+                Nous serions ravis d'avoir de vos nouvelles. N'hésitez pas à nous contacter pour toute question, 
+                demande de prière ou pour en savoir plus sur notre église.
+            </p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Informations de contact -->
+            <div class="content-card fade-in">
+                <h2>
+                    <span class="accent-dot"></span> 
+                    <span data-translate="contact.info.title">Informations de contact</span>
+                    <span class="accent-dot"></span>
+                </h2>
+                <div class="section-divider"></div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                        <h5 data-translate="contact.info.email">Email</h5>
+                        <p>contact@cmciobili.org</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div>
+                        <h5 data-translate="contact.info.phone">Téléphone</h5>
+                        <p>+237 XXX XXX XXX<br>+237 XXX XXX XXX</p>
+                    </div>
+                </div>
+                
+                <div class="contact-info-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h5 data-translate="contact.info.address">Adresse</h5>
+                        <p data-translate="contact.info.address.text">Quartier Obili<br>Yaoundé, Cameroun</p>
+                    </div>
+                </div>
+
+                <!-- Contact rapide WhatsApp -->
+                <a href="https://wa.me/237XXXXXXXXX?text=Bonjour%2C%20je%20vous%20contacte%20depuis%20le%20site%20de%20CMCI%20OBILI" 
+                   class="whatsapp-cta" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-translate="contact.whatsapp">Message WhatsApp rapide</span>
+                </a>
+
+                <!-- Réseaux sociaux -->
+                <div class="social-section">
+                    <h3><i class="fas fa-share-alt"></i> <span data-translate="contact.social">Suivez-nous</span></h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link youtube" target="_blank" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link instagram" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" target="_blank" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link whatsapp" target="_blank" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="availability-status">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span data-translate="contact.status">Ouverts et disponibles pour vous accueillir</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaire de contact -->
+            <div class="content-card fade-in">
+                <h2>
+                    <span class="accent-dot"></span> 
+                    <span data-translate="contact.form.title">Envoyez-nous un message</span>
+                    <span class="accent-dot"></span>
+                </h2>
+                <div class="section-divider"></div>
+                
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                            <i class="fas fa-user"></i> <span data-translate="contact.form.name">Nom complet</span> *
+                        </label>
+                        <input type="text" name="from_name" class="form-control" 
+                               data-translate-placeholder="contact.form.name.placeholder"
+                               placeholder="Votre nom complet" required 
+                               style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                            <i class="fas fa-envelope"></i> <span data-translate="contact.form.email">Email</span> *
+                        </label>
+                        <input type="email" name="from_email" class="form-control" 
+                               data-translate-placeholder="contact.form.email.placeholder"
+                               placeholder="votre@email.com" required 
+                               style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                            <i class="fas fa-phone"></i> <span data-translate="contact.form.phone">Téléphone (optionnel)</span>
+                        </label>
+                        <input type="tel" name="phone" class="form-control" 
+                               data-translate-placeholder="contact.form.phone.placeholder"
+                               placeholder="+237 XXX XXX XXX" 
+                               style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                            <i class="fas fa-tag"></i> <span data-translate="contact.form.subject">Sujet</span> *
+                        </label>
+                        <select name="subject" class="form-control" required 
+                                style="border: 2px solid var(--primary-green); border-radius: 8px;">
+                            <option value="" data-translate="contact.form.subject.select">Sélectionnez un sujet</option>
+                            <option value="information" data-translate="contact.form.subject.info">Demande d'information</option>
+                            <option value="priere" data-translate="contact.form.subject.prayer">Demande de prière</option>
+                            <option value="visite" data-translate="contact.form.subject.visit">Planifier une visite</option>
+                            <option value="bapteme" data-translate="contact.form.subject.baptism">Baptême</option>
+                            <option value="mariage" data-translate="contact.form.subject.marriage">Mariage</option>
+                            <option value="don" data-translate="contact.form.subject.donation">Dons et offrandes</option>
+                            <option value="volontariat" data-translate="contact.form.subject.volunteer">Devenir volontaire</option>
+                            <option value="autre" data-translate="contact.form.subject.other">Autre</option>
+                        </select>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label" style="color: var(--primary-green); font-weight: 500;">
+                            <i class="fas fa-comment"></i> <span data-translate="contact.form.message">Message</span> *
+                        </label>
+                        <textarea name="message" class="form-control" rows="5" 
+                                  data-translate-placeholder="contact.form.message.placeholder"
+                                  placeholder="Votre message..." required 
+                                  style="border: 2px solid var(--primary-green); border-radius: 8px;"></textarea>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn" class="btn btn-lg w-100" 
+                            style="background: var(--primary-green); color: white; border-radius: 25px; font-weight: bold; border: none; transition: all 0.3s ease;">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="contact.form.submit">Envoyer le message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section Carte Google Maps -->
+        <div class="content-card map-section fade-in">
+            <h2>
+                <span class="accent-dot"></span> 
+                <i class="fas fa-map-marker-alt"></i> <span data-translate="contact.map.title">Notre Localisation</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <p style="color: #555;" data-translate="contact.map.subtitle">Retrouvez-nous au cœur d'Obili, Yaoundé</p>
+            <div class="section-divider"></div>
+
+            <div class="map-container" id="map">
+                <div class="map-placeholder" id="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h4>CMCI OBILI</h4>
+                    <p data-translate="contact.map.location">Quartier Obili, Yaoundé, Cameroun</p>
+                    <button class="directions-btn" onclick="loadGoogleMap()">
+                        <i class="fas fa-map"></i>
+                        <span data-translate="contact.map.load">Charger la carte</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="map-details">
+                <div class="detail-item">
+                    <i class="fas fa-home"></i>
+                    <div>
+                        <strong data-translate="contact.map.district">Quartier</strong><br>
+                        <span data-translate="contact.map.district.name">Obili, Yaoundé</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong data-translate="contact.map.hours">Horaires</strong><br>
+                        <span data-translate="contact.map.hours.time">Dim: 9h-12h | Mer: 18h-20h</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-car"></i>
+                    <div>
+                        <strong data-translate="contact.map.transport">Transport</strong><br>
+                        <span data-translate="contact.map.transport.text">Accessible en taxi/voiture</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <strong data-translate="contact.map.welcome">Accueil</strong><br>
+                        <span data-translate="contact.map.welcome.text">Toujours disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 25px; text-align: center;">
+                <a href="https://www.google.com/maps/dir//3.8546926,11.4898802" target="_blank" rel="noopener noreferrer" class="directions-btn">
+                    <i class="fas fa-route"></i>
+                    <span data-translate="contact.map.directions">Obtenir l'itinéraire</span>
+                </a>
+                <a href="https://www.google.com/maps/place/3.8546926,11.4898802" target="_blank" rel="noopener noreferrer" class="directions-btn" style="margin-left: 10px;">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span data-translate="contact.map.view">Voir sur Google Maps</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/translator.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/script_contact.js"></script>
+    
+    <!-- Traductions spécifiques à la page Contact -->
+    <script>
+        const contactTranslations = {
+            fr: {
+                "page.title": "Contact - CMCI OBILI",
+                "contact.title": "Contactez-nous",
+                "contact.intro": "Nous serions ravis d'avoir de vos nouvelles. N'hésitez pas à nous contacter pour toute question, demande de prière ou pour en savoir plus sur notre église.",
+                "contact.info.title": "Informations de contact",
+                "contact.info.email": "Email",
+                "contact.info.phone": "Téléphone",
+                "contact.info.address": "Adresse",
+                "contact.info.address.text": "Quartier Obili<br>Yaoundé, Cameroun",
+                "contact.whatsapp": "Message WhatsApp rapide",
+                "contact.social": "Suivez-nous",
+                "contact.status": "Ouverts et disponibles pour vous accueillir",
+                "contact.form.title": "Envoyez-nous un message",
+                "contact.form.name": "Nom complet",
+                "contact.form.name.placeholder": "Votre nom complet",
+                "contact.form.email": "Email",
+                "contact.form.email.placeholder": "votre@email.com",
+                "contact.form.phone": "Téléphone (optionnel)",
+                "contact.form.phone.placeholder": "+237 XXX XXX XXX",
+                "contact.form.subject": "Sujet",
+                "contact.form.subject.select": "Sélectionnez un sujet",
+                "contact.form.subject.info": "Demande d'information",
+                "contact.form.subject.prayer": "Demande de prière",
+                "contact.form.subject.visit": "Planifier une visite",
+                "contact.form.subject.baptism": "Baptême",
+                "contact.form.subject.marriage": "Mariage",
+                "contact.form.subject.donation": "Dons et offrandes",
+                "contact.form.subject.volunteer": "Devenir volontaire",
+                "contact.form.subject.other": "Autre",
+                "contact.form.message": "Message",
+                "contact.form.message.placeholder": "Votre message...",
+                "contact.form.submit": "Envoyer le message",
+                "contact.map.title": "Notre Localisation",
+                "contact.map.subtitle": "Retrouvez-nous au cœur d'Obili, Yaoundé",
+                "contact.map.location": "Quartier Obili, Yaoundé, Cameroun",
+                "contact.map.load": "Charger la carte",
+                "contact.map.district": "Quartier",
+                "contact.map.district.name": "Obili, Yaoundé",
+                "contact.map.hours": "Horaires",
+                "contact.map.hours.time": "Dim: 9h-12h | Mer: 18h-20h",
+                "contact.map.transport": "Transport",
+                "contact.map.transport.text": "Accessible en taxi/voiture",
+                "contact.map.welcome": "Accueil",
+                "contact.map.welcome.text": "Toujours disponible",
+                "contact.map.directions": "Obtenir l'itinéraire",
+                "contact.map.view": "Voir sur Google Maps"
+            },
+            en: {
+                "page.title": "Contact - CMCI OBILI",
+                "contact.title": "Contact Us",
+                "contact.intro": "We would love to hear from you. Feel free to contact us for any questions, prayer requests, or to learn more about our church.",
+                "contact.info.title": "Contact Information",
+                "contact.info.email": "Email",
+                "contact.info.phone": "Phone",
+                "contact.info.address": "Address",
+                "contact.info.address.text": "Obili District<br>Yaoundé, Cameroon",
+                "contact.whatsapp": "Quick WhatsApp Message",
+                "contact.social": "Follow Us",
+                "contact.status": "Open and available to welcome you",
+                "contact.form.title": "Send Us a Message",
+                "contact.form.name": "Full Name",
+                "contact.form.name.placeholder": "Your full name",
+                "contact.form.email": "Email",
+                "contact.form.email.placeholder": "your@email.com",
+                "contact.form.phone": "Phone (optional)",
+                "contact.form.phone.placeholder": "+237 XXX XXX XXX",
+                "contact.form.subject": "Subject",
+                "contact.form.subject.select": "Select a subject",
+                "contact.form.subject.info": "Information request",
+                "contact.form.subject.prayer": "Prayer request",
+                "contact.form.subject.visit": "Schedule a visit",
+                "contact.form.subject.baptism": "Baptism",
+                "contact.form.subject.marriage": "Marriage",
+                "contact.form.subject.donation": "Donations and offerings",
+                "contact.form.subject.volunteer": "Become a volunteer",
+                "contact.form.subject.other": "Other",
+                "contact.form.message": "Message",
+                "contact.form.message.placeholder": "Your message...",
+                "contact.form.submit": "Send Message",
+                "contact.map.title": "Our Location",
+                "contact.map.subtitle": "Find us in the heart of Obili, Yaoundé",
+                "contact.map.location": "Obili District, Yaoundé, Cameroon",
+                "contact.map.load": "Load Map",
+                "contact.map.district": "District",
+                "contact.map.district.name": "Obili, Yaoundé",
+                "contact.map.hours": "Hours",
+                "contact.map.hours.time": "Sun: 9am-12pm | Wed: 6pm-8pm",
+                "contact.map.transport": "Transport",
+                "contact.map.transport.text": "Accessible by taxi/car",
+                "contact.map.welcome": "Welcome",
+                "contact.map.welcome.text": "Always available",
+                "contact.map.directions": "Get Directions",
+                "contact.map.view": "View on Google Maps"
+            }
+        };
+        
+        // Enregistrer les traductions
+        if (window.translator) {
+            window.translator.registerPageTranslations(contactTranslations);
+        }
+    </script>
+</body>
+</html>

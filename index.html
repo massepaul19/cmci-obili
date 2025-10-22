@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">Accueil - CMCI OBILI</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style2.css">
+</head>
+<body>
+    <!-- HEADER (chargé automatiquement) -->
+    <div id="header-placeholder"></div>
+
+    <!-- Bouton Menu - DOIT ÊTRE ICI, EN DEHORS DE TOUT CONTENEUR -->
+    <button class="menu-toggle" id="menuToggle"></button>
+
+    <!-- Overlay - DOIT ÊTRE ICI, EN DEHORS DE TOUT CONTENEUR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR - EN DEHORS DU CONTAINER FLUID -->
+    <div id="sidebar-placeholder"></div>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="content-area" id="contentArea">
+        <div class="welcome-text">
+            <h1>
+                <span class="accent-dot"></span> 
+                <span data-translate="home.welcome.title">Bienvenue à CMCI OBILI</span> 
+                <span class="accent-dot"></span>
+            </h1>
+            <p data-translate="home.welcome.intro">
+                Nous sommes une communauté de croyants passionnés par la Parole de Dieu et dédiés à servir 
+                notre Seigneur Jésus-Christ avec tout notre cœur.
+            </p>
+            <p data-translate="home.welcome.mission">
+                Notre mission est de proclamer l'Évangile, d'édifier les croyants et de servir notre communauté 
+                avec amour, compassion et fidélité à la Parole de Dieu.
+            </p>
+        </div>
+
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span> 
+                <span data-translate="home.values.title">Nos Valeurs</span> 
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            <p data-translate="home.values.intro">
+                Nous croyons en la puissance transformatrice de l'Évangile et en l'importance de vivre 
+                selon les principes bibliques. Chaque membre de notre communauté est précieux et a un rôle 
+                unique à jouer dans le corps de Christ.
+            </p>
+            <ul style="color: #555; line-height: 2;">
+                <li>
+                    <strong style="color: var(--primary-green);" data-translate="home.values.faith">La Foi</strong> 
+                    - <span data-translate="home.values.faith.desc">Fondée sur la Parole de Dieu</span>
+                </li>
+                <li>
+                    <strong style="color: var(--primary-green);" data-translate="home.values.love">L'Amour</strong> 
+                    - <span data-translate="home.values.love.desc">Envers Dieu et notre prochain</span>
+                </li>
+                <li>
+                    <strong style="color: var(--primary-green);" data-translate="home.values.communion">La Communion</strong> 
+                    - <span data-translate="home.values.communion.desc">Un corps uni en Christ</span>
+                </li>
+                <li>
+                    <strong style="color: var(--primary-green);" data-translate="home.values.service">Le Service</strong> 
+                    - <span data-translate="home.values.service.desc">Servir avec nos dons et talents</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span> 
+                <span data-translate="home.worship.title">Nos Cultes</span> 
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            <p data-translate="home.worship.intro">
+                Rejoignez-nous pour nos temps de culte et d'adoration où nous célébrons ensemble la fidélité 
+                de Dieu et recevons Sa Parole avec révérence.
+            </p>
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div style="background: rgba(61, 155, 143, 0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-yellow);">
+                        <h5 style="color: var(--primary-green);">
+                            <i class="fas fa-calendar-day"></i> 
+                            <span data-translate="home.worship.sunday">Dimanche</span>
+                        </h5>
+                        <p style="margin: 5px 0; color: #555;">
+                            <i class="fas fa-clock"></i> 
+                            <span data-translate="home.worship.sunday.time">9h00 - 12h00</span>
+                        </p>
+                        <p style="margin: 0; color: #555;" data-translate="home.worship.sunday.desc">
+                            Culte principal avec prédication
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div style="background: rgba(61, 155, 143, 0.1); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-yellow);">
+                        <h5 style="color: var(--primary-green);">
+                            <i class="fas fa-calendar-week"></i> 
+                            <span data-translate="home.worship.wednesday">Mercredi</span>
+                        </h5>
+                        <p style="margin: 5px 0; color: #555;">
+                            <i class="fas fa-clock"></i> 
+                            <span data-translate="home.worship.wednesday.time">18h00 - 20h00</span>
+                        </p>
+                        <p style="margin: 0; color: #555;" data-translate="home.worship.wednesday.desc">
+                            Étude biblique et prière
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span> 
+                <span data-translate="home.join.title">Rejoignez Notre Communauté</span> 
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            <p data-translate="home.join.text">
+                Que vous soyez un nouveau croyant ou un chrétien mature, vous êtes le bienvenu dans notre 
+                communauté. Venez grandir avec nous dans la connaissance de Dieu et découvrir votre destinée 
+                en Christ.
+            </p>
+            <div class="text-center mt-4">
+                <a href="contact.html" class="btn btn-lg" style="background: var(--primary-green); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
+                    <i class="fas fa-envelope"></i> <span data-translate="home.join.button">Contactez-nous</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="content-card" style="background: linear-gradient(135deg, var(--primary-green), var(--light-green)); color: white; border-left: 4px solid var(--accent-yellow);">
+            <h2 style="color: var(--accent-yellow);">
+                <i class="fas fa-bible"></i> 
+                <span data-translate="home.verse.title">Verset du Jour</span>
+            </h2>
+            <div class="section-divider" style="background: rgba(255,255,255,0.3);"></div>
+            <p style="font-size: 18px; font-style: italic; color: white;" data-translate="home.verse.text">
+                "Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui 
+                ne périsse point, mais qu'il ait la vie éternelle."
+            </p>
+            <p style="text-align: right; color: var(--accent-yellow); font-weight: bold;">
+                - <span data-translate="home.verse.reference">Jean 3:16</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- FOOTER (chargé automatiquement) -->
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/translator.js"></script>
+    <script src="static/js/main.js"></script>
+    
+    <!-- Traductions spécifiques à la page d'accueil -->
+    <script>
+        const homeTranslations = {
+            fr: {
+                "page.title": "Accueil - CMCI OBILI",
+                "home.welcome.title": "Bienvenue à CMCI OBILI",
+                "home.welcome.intro": "Nous sommes une communauté de croyants passionnés par la Parole de Dieu et dédiés à servir notre Seigneur Jésus-Christ avec tout notre cœur.",
+                "home.welcome.mission": "Notre mission est de proclamer l'Évangile, d'édifier les croyants et de servir notre communauté avec amour, compassion et fidélité à la Parole de Dieu.",
+                "home.values.title": "Nos Valeurs",
+                "home.values.intro": "Nous croyons en la puissance transformatrice de l'Évangile et en l'importance de vivre selon les principes bibliques. Chaque membre de notre communauté est précieux et a un rôle unique à jouer dans le corps de Christ.",
+                "home.values.faith": "La Foi",
+                "home.values.faith.desc": "Fondée sur la Parole de Dieu",
+                "home.values.love": "L'Amour",
+                "home.values.love.desc": "Envers Dieu et notre prochain",
+                "home.values.communion": "La Communion",
+                "home.values.communion.desc": "Un corps uni en Christ",
+                "home.values.service": "Le Service",
+                "home.values.service.desc": "Servir avec nos dons et talents",
+                "home.worship.title": "Nos Cultes",
+                "home.worship.intro": "Rejoignez-nous pour nos temps de culte et d'adoration où nous célébrons ensemble la fidélité de Dieu et recevons Sa Parole avec révérence.",
+                "home.worship.sunday": "Dimanche",
+                "home.worship.sunday.time": "9h00 - 12h00",
+                "home.worship.sunday.desc": "Culte principal avec prédication",
+                "home.worship.wednesday": "Mercredi",
+                "home.worship.wednesday.time": "18h00 - 20h00",
+                "home.worship.wednesday.desc": "Étude biblique et prière",
+                "home.join.title": "Rejoignez Notre Communauté",
+                "home.join.text": "Que vous soyez un nouveau croyant ou un chrétien mature, vous êtes le bienvenu dans notre communauté. Venez grandir avec nous dans la connaissance de Dieu et découvrir votre destinée en Christ.",
+                "home.join.button": "Contactez-nous",
+                "home.verse.title": "Verset du Jour",
+                "home.verse.text": "\"Car Dieu a tant aimé le monde qu'il a donné son Fils unique, afin que quiconque croit en lui ne périsse point, mais qu'il ait la vie éternelle.\"",
+                "home.verse.reference": "Jean 3:16"
+            },
+            en: {
+                "page.title": "Home - CMCI OBILI",
+                "home.welcome.title": "Welcome to CMCI OBILI",
+                "home.welcome.intro": "We are a community of believers passionate about God's Word and dedicated to serving our Lord Jesus Christ with all our hearts.",
+                "home.welcome.mission": "Our mission is to proclaim the Gospel, build up believers, and serve our community with love, compassion, and faithfulness to God's Word.",
+                "home.values.title": "Our Values",
+                "home.values.intro": "We believe in the transformative power of the Gospel and the importance of living according to biblical principles. Each member of our community is precious and has a unique role to play in the body of Christ.",
+                "home.values.faith": "Faith",
+                "home.values.faith.desc": "Grounded in God's Word",
+                "home.values.love": "Love",
+                "home.values.love.desc": "For God and our neighbors",
+                "home.values.communion": "Fellowship",
+                "home.values.communion.desc": "One body united in Christ",
+                "home.values.service": "Service",
+                "home.values.service.desc": "Serving with our gifts and talents",
+                "home.worship.title": "Our Services",
+                "home.worship.intro": "Join us for our worship times where we celebrate God's faithfulness together and receive His Word with reverence.",
+                "home.worship.sunday": "Sunday",
+                "home.worship.sunday.time": "9:00 AM - 12:00 PM",
+                "home.worship.sunday.desc": "Main service with preaching",
+                "home.worship.wednesday": "Wednesday",
+                "home.worship.wednesday.time": "6:00 PM - 8:00 PM",
+                "home.worship.wednesday.desc": "Bible study and prayer",
+                "home.join.title": "Join Our Community",
+                "home.join.text": "Whether you are a new believer or a mature Christian, you are welcome in our community. Come grow with us in the knowledge of God and discover your destiny in Christ.",
+                "home.join.button": "Contact Us",
+                "home.verse.title": "Verse of the Day",
+                "home.verse.text": "\"For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.\"",
+                "home.verse.reference": "John 3:16"
+            }
+        };
+        
+        // Enregistrer les traductions
+        if (window.translator) {
+            window.translator.registerPageTranslations(homeTranslations);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Web Église</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #3d9b8f;
+            --light-green: #5db5a8;
+            --accent-yellow: #c6d647;
+            --dark-green: #2d7a70;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--light-green) 100%);
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Motif de fond avec l'oiseau répété */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Overlay pattern */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 100px,
+                rgba(255, 255, 255, 0.02) 100px,
+                rgba(255, 255, 255, 0.02) 200px
+            );
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container-fluid {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.98);
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-text {
+            color: var(--primary-green);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Sidebar Menu */
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            min-height: calc(100vh - 100px);
+            padding: 0;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item {
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background: rgba(61, 155, 143, 0.1);
+            border-left-color: var(--primary-green);
+        }
+
+        .menu-link {
+            color: var(--dark-green);
+            text-decoration: none;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .menu-link:hover {
+            color: var(--primary-green);
+        }
+
+        .menu-link i {
+            color: var(--primary-green);
+            width: 20px;
+        }
+
+        /* Submenu */
+        .submenu {
+            background: rgba(93, 181, 168, 0.05);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .submenu.active {
+            max-height: 500px;
+        }
+
+        .submenu-link {
+            color: #555;
+            text-decoration: none;
+            padding: 12px 20px 12px 50px;
+            display: block;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .submenu-link:hover {
+            background: rgba(61, 155, 143, 0.1);
+            color: var(--primary-green);
+            padding-left: 55px;
+        }
+
+        /* Content Area */
+        .content-area {
+            background: rgba(255, 255, 255, 0.95);
+            min-height: calc(100vh - 100px);
+            padding: 30px;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .content-card h2 {
+            color: var(--primary-green);
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .content-card p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* Accent elements */
+        .accent-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-yellow);
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-green), var(--accent-yellow), var(--primary-green));
+            margin: 20px 0;
+            opacity: 0.3;
+        }
+
+        /* Chevron animation */
+        .chevron {
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item.active .chevron {
+            transform: rotate(90deg);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                min-height: auto;
+            }
+            .content-area {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo-circle">
+                <i class="fas fa-dove" style="color: white; font-size: 30px;"></i>
+            </div>
+            <div class="logo-text">Votre Église</div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row g-0">
+            <!-- Sidebar Menu -->
+            <div class="col-md-3 sidebar">
+                <!-- Organisation -->
+                <div class="menu-item" onclick="toggleSubmenu(this)">
+                    <div class="menu-link">
+                        <span><i class="fas fa-sitemap"></i> Organisation</span>
+                        <i class="fas fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-link">Historique</a>
+                        <a href="#" class="submenu-link">Qui sommes-nous</a>
+                        <a href="#" class="submenu-link">Notre Vision</a>
+                        <a href="#" class="submenu-link">Notre Mission</a>
+                    </div>
+                </div>
+
+                <!-- Départements -->
+                <div class="menu-item" onclick="toggleSubmenu(this)">
+                    <div class="menu-link">
+                        <span><i class="fas fa-users"></i> Départements</span>
+                        <i class="fas fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-link">Département de Prière</a>
+                        <a href="#" class="submenu-link">Département Communication</a>
+                        <a href="#" class="submenu-link">Département Protocole</a>
+                        <a href="#" class="submenu-link">Département Jeunesse</a>
+                        <a href="#" class="submenu-link">Département Musique</a>
+                    </div>
+                </div>
+
+                <!-- Messages -->
+                <div class="menu-item" onclick="toggleSubmenu(this)">
+                    <div class="menu-link">
+                        <span><i class="fas fa-book-open"></i> Messages</span>
+                        <i class="fas fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-link">Messages Audio</a>
+                        <a href="#" class="submenu-link">Messages Vidéo</a>
+                        <a href="#" class="submenu-link">Messages Écrits</a>
+                        <a href="#" class="submenu-link">Études Bibliques</a>
+                    </div>
+                </div>
+
+                <!-- Événements -->
+                <div class="menu-item" onclick="toggleSubmenu(this)">
+                    <div class="menu-link">
+                        <span><i class="fas fa-calendar-alt"></i> Événements</span>
+                        <i class="fas fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="submenu">
+                        <a href="#" class="submenu-link">Événements à venir</a>
+                        <a href="#" class="submenu-link">Événements passés</a>
+                        <a href="#" class="submenu-link">Programmes spéciaux</a>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="menu-item">
+                    <a href="#" class="menu-link">
+                        <span><i class="fas fa-envelope"></i> Contactez-nous</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="col-md-9 content-area">
+                <div class="content-card">
+                    <h2><span class="accent-dot"></span> Bienvenue <span class="accent-dot"></span></h2>
+                    <div class="section-divider"></div>
+                    <p>
+                        Bienvenue sur le site web de notre église. Nous sommes une communauté de croyants
+                        passionnés par la Parole de Dieu et dédiés à servir notre Seigneur Jésus-Christ.
+                    </p>
+                    <p>
+                        Notre mission est de proclamer l'Évangile, d'édifier les croyants et de servir
+                        notre communauté avec amour et compassion.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2><span class="accent-dot"></span> Nos Activités <span class="accent-dot"></span></h2>
+                    <div class="section-divider"></div>
+                    <p>
+                        Nous organisons régulièrement des cultes, des études bibliques, des séminaires
+                        et des événements spéciaux pour fortifier la foi de nos membres et atteindre
+                        de nouvelles âmes pour Christ.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <h2><span class="accent-dot"></span> Rejoignez-nous <span class="accent-dot"></span></h2>
+                    <div class="section-divider"></div>
+                    <p>
+                        Que vous soyez un nouveau croyant ou un chrétien mature, vous êtes le bienvenu
+                        dans notre communauté. Venez grandir avec nous dans la connaissance de Dieu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSubmenu(element) {
+            const submenu = element.querySelector('.submenu');
+            const allMenuItems = document.querySelectorAll('.menu-item');
+            const allSubmenus = document.querySelectorAll('.submenu');
+            
+            // Close all other submenus
+            allMenuItems.forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('active');
+                }
+            });
+            allSubmenus.forEach(sub => {
+                if (sub !== submenu) {
+                    sub.classList.remove('active');
+                }
+            });
+            
+            // Toggle current submenu
+            element.classList.toggle('active');
+            submenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
