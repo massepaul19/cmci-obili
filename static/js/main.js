@@ -124,13 +124,24 @@ function getSidebar() {
           </div>
 
           <!-- Sélecteur de thème -->
-          <select class="form-select theme-selector ms-2" id="themeSelector" onchange="changeTheme(this.value)" style="width: 110px;">
-            <option value="green">🟢 Vert</option>
-            <option value="blue">🔵 Bleu</option>
-            <option value="white">⚪ Blanc</option>
-            <option value="black">⚫ Noir</option>
-          </select>
-        </div>
+		<!-- Sélecteur de thème -->
+		<select class="form-select theme-selector ms-2" id="themeSelector" onchange="changeTheme(this.value)" style="width: 150px;">
+		  <option value="blue">🔵 Bleu</option>
+		  <option value="green">🟢 Vert</option>
+		  <option value="lime">💚 Vert citron</option>
+		  <option value="red">🔴 Rouge</option>
+		  <option value="pink">🌸 Rose</option>
+		  <option value="white">⚪ Blanc</option>
+		  <option value="black">⚫ Noir</option>
+		  <option value="orange">🟠 Orange</option>
+		  <option value="purple">🟣 Violet</option>
+		  <option value="cyan">🔷 Cyan</option>
+		  <option value="sand">🟤 Sable</option>
+		  <option value="mint">💚 Menthe</option>
+		  <option value="gold">🟡 Or</option>
+		</select>
+
+	  </div>
 
         <div class="menu-item">
             <div class="menu-link" data-submenu="organisation">
@@ -282,11 +293,9 @@ function getFooter() {
             
                   <br><em>— 1 Corinthiens 12:4-5</em><br>
           </p>
+          	  <br><i class="fas fa-heart" style="color: #c6d647;"></i> Toute la gloire à Dieu.
                   </div>
               </div>
-              <div class="footer-bottom">
-             <i class="fas fa-heart" style="color: #c6d647;"></i> Toute la gloire à Dieu.
-            </div>
         </div>
     </footer>
     `;
@@ -440,6 +449,23 @@ function initializeApp() {
     
     console.log('✅ CMCI OBILI prêt!');
 }
+
+// ================== CHARGEMENT CARTE GOOGLE ==================
+function loadGoogleMap() {
+    const mapPlaceholder = document.getElementById('map-placeholder');
+    if (!mapPlaceholder) return;
+    
+    const iframe = document.createElement('iframe');
+    iframe.width = '100%';
+    iframe.height = '400';
+    iframe.loading = 'lazy';
+    iframe.allowFullscreen = true;
+    iframe.src = 'https://maps.google.com/maps?q=3.8546926,11.4898802&hl=fr&z=15&output=embed';
+    
+    mapPlaceholder.innerHTML = '';
+    mapPlaceholder.appendChild(iframe);
+}
+
 
 // Animation scroll
 function animateOnScroll() {

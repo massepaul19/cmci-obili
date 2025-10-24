@@ -6,7 +6,8 @@
     <title data-translate="page.title">Accueil - CMCI OBILI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">    
+    <link rel="stylesheet" href="static/css/style_index.css">
 </head>
 <body>
     <!-- HEADER (chargé automatiquement) -->
@@ -56,7 +57,7 @@
                     <strong style="color: var(--primary-color);" data-translate="home.values.faith">La Foi</strong> 
                     - <span data-translate="home.values.faith.desc">Fondée sur la Parole de Dieu</span>
                 </li>
-                <li>
+               <li>
                     <strong style="color: var(--primary-color);" data-translate="home.values.love">L'Amour</strong> 
                     - <span data-translate="home.values.love.desc">Envers Dieu et notre prochain</span>
                 </li>
@@ -91,7 +92,7 @@
                         </h5>
                         <p class="time-info">
                             <i class="fas fa-clock"></i> 
-                            <span data-translate="home.worship.sunday.time">9h00 - 12h00</span>
+                            <span data-translate="home.worship.sunday.time">8h00 - 12h00</span>
                         </p>
                         <p class="description" data-translate="home.worship.sunday.desc">
                             Culte principal avec prédication
@@ -102,19 +103,49 @@
                     <div class="worship-schedule-card">
                         <h5>
                             <i class="fas fa-calendar-week"></i> 
-                            <span data-translate="home.worship.wednesday">Mercredi</span>
+                            <span data-translate="home.worship.wednesday">Mardi</span>
                         </h5>
                         <p class="time-info">
                             <i class="fas fa-clock"></i> 
-                            <span data-translate="home.worship.wednesday.time">18h00 - 20h00</span>
+                            <span data-translate="home.worship.wednesday.time">17h00 - 20h00</span>
                         </p>
                         <p class="description" data-translate="home.worship.wednesday.desc">
-                            Étude biblique et prière
+                            Enseignements
                         </p>
                     </div>
                 </div>
             </div>
         </div>
+
+	<!-- Section Carte Google Maps -->
+	<div class="content-area" id="contentArea">
+	    <h2 class="section-title">
+		<span class="accent-dot"></span>
+		<i class="fas fa-map-marker-alt"></i>
+		<span data-translate="contact.map.title">Notre Localisation</span>
+		<span class="accent-dot"></span>
+	    </h2>
+
+	    <p class="section-subtitle" data-translate="contact.map.subtitle">
+		Retrouvez-nous au cœur d'Obili, Yaoundé
+	    </p>
+
+	    <div class="section-divider"></div>
+
+	    <div class="map-container" id="map">
+		<div class="map-placeholder" id="map-placeholder">
+		    <i class="fas fa-map-marked-alt map-icon"></i>
+		    <h4 class="map-title">CMCI OBILI</h4>
+		    <p class="map-text" data-translate="contact.map.location">
+		        Quartier Obili, Yaoundé, Cameroun
+		    </p>
+		    <button class="btn-map" onclick="loadGoogleMap()">
+		        <i class="fas fa-map"></i>
+		        <span data-translate="contact.map.load">Charger la carte</span>
+		    </button>
+		</div>
+	    </div>
+	</div>
 
         <div class="content-card">
             <h2>
@@ -156,144 +187,6 @@
     <div id="footer-placeholder"></div>
 
     <!-- Styles additionnels pour cette page -->
-    <style>
-        /* Cartes de planning de culte */
-        .worship-schedule-card {
-            background: var(--hover-bg);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 3px solid var(--accent-color);
-            transition: all 0.3s ease;
-        }
-
-        .worship-schedule-card:hover {
-            background: var(--light-bg);
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px var(--shadow-color);
-        }
-
-        .worship-schedule-card h5 {
-            color: var(--primary-color);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .worship-schedule-card h5 i {
-            color: var(--accent-color);
-            margin-right: 8px;
-        }
-
-        .worship-schedule-card .time-info {
-            margin: 5px 0;
-            color: var(--dark-text);
-            font-weight: 500;
-        }
-
-        .worship-schedule-card .time-info i {
-            color: var(--primary-color);
-            margin-right: 5px;
-        }
-
-        .worship-schedule-card .description {
-            margin: 0;
-            color: var(--dark-text);
-            opacity: 0.8;
-        }
-
-        /* Bouton de contact */
-        .btn-contact {
-            background: var(--primary-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            box-shadow: 0 4px 10px var(--shadow-color);
-        }
-
-        .btn-contact:hover {
-            background: var(--primary-dark);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px var(--shadow-color);
-        }
-
-        .btn-contact i {
-            margin-right: 8px;
-        }
-
-        /* Carte du verset */
-        .verse-card {
-            background: linear-gradient(135deg, var(--primary-color), var(--primary-light)) !important;
-            color: white;
-            border-left: 4px solid var(--accent-color) !important;
-        }
-
-        .verse-card h2 {
-            color: var(--accent-color) !important;
-        }
-
-        .verse-card h2 i {
-            color: var(--accent-color);
-            margin-right: 10px;
-        }
-
-        .verse-divider {
-            background: rgba(255, 255, 255, 0.3) !important;
-        }
-
-        .verse-text {
-            font-size: 18px;
-            font-style: italic;
-            color: white !important;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .verse-reference {
-            text-align: right;
-            color: var(--accent-color) !important;
-            font-weight: bold;
-            margin: 0;
-        }
-
-        /* Thème noir - adaptations spécifiques */
-        [data-theme="black"] .worship-schedule-card {
-            background: var(--medium-bg);
-        }
-
-        [data-theme="black"] .worship-schedule-card:hover {
-            background: var(--hover-bg);
-        }
-
-        [data-theme="black"] .worship-schedule-card .time-info,
-        [data-theme="black"] .worship-schedule-card .description {
-            color: var(--dark-text);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .worship-schedule-card {
-                padding: 15px;
-            }
-
-            .worship-schedule-card h5 {
-                font-size: 16px;
-            }
-
-            .verse-text {
-                font-size: 16px;
-            }
-
-            .btn-contact {
-                padding: 10px 25px;
-                font-size: 14px;
-            }
-        }
-    </style>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/translator.js"></script>
     <script src="static/js/main.js"></script>
@@ -319,11 +212,15 @@
                 "home.worship.title": "Nos Cultes",
                 "home.worship.intro": "Rejoignez-nous pour nos temps de culte et d'adoration où nous célébrons ensemble la fidélité de Dieu et recevons Sa Parole avec révérence.",
                 "home.worship.sunday": "Dimanche",
-                "home.worship.sunday.time": "9h00 - 12h00",
+                "home.worship.sunday.time": "8h00 - 12h00",
                 "home.worship.sunday.desc": "Culte principal avec prédication",
-                "home.worship.wednesday": "Mercredi",
-                "home.worship.wednesday.time": "18h00 - 20h00",
-                "home.worship.wednesday.desc": "Étude biblique et prière",
+                "home.worship.wednesday": "Mardi",
+                "home.worship.wednesday.time": "17h00 - 20h00",
+                "home.worship.wednesday.desc": "Enseignements",
+                "contact.map.load": "Charger la carte",
+                "contact.map.district": "Quartier",
+                "contact.map.district.name": "Obili, Yaoundé",
+                
                 "home.join.title": "Rejoignez Notre Communauté",
                 "home.join.text": "Que vous soyez un nouveau croyant ou un chrétien mature, vous êtes le bienvenu dans notre communauté. Venez grandir avec nous dans la connaissance de Dieu et découvrir votre destinée en Christ.",
                 "home.join.button": "Contactez-nous",
@@ -349,11 +246,15 @@
                 "home.worship.title": "Our Services",
                 "home.worship.intro": "Join us for our worship times where we celebrate God's faithfulness together and receive His Word with reverence.",
                 "home.worship.sunday": "Sunday",
-                "home.worship.sunday.time": "9:00 AM - 12:00 PM",
+                "home.worship.sunday.time": "8:00 AM - 12:00 PM",
                 "home.worship.sunday.desc": "Main service with preaching",
-                "home.worship.wednesday": "Wednesday",
-                "home.worship.wednesday.time": "6:00 PM - 8:00 PM",
-                "home.worship.wednesday.desc": "Bible study and prayer",
+                "home.worship.wednesday": "Tuesday",
+                "home.worship.wednesday.time": "5:00 PM - 8:00 PM",
+                "home.worship.wednesday.desc": "Teachings",
+                "contact.map.load": "Load Map",
+                "contact.map.district": "District",
+                "contact.map.district.name": "Obili, Yaoundé",
+                
                 "home.join.title": "Join Our Community",
                 "home.join.text": "Whether you are a new believer or a mature Christian, you are welcome in our community. Come grow with us in the knowledge of God and discover your destiny in Christ.",
                 "home.join.button": "Contact Us",

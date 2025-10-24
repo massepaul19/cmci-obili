@@ -134,21 +134,6 @@ async function handleFormSubmit(e) {
     }
 }
 
-// ================== CHARGEMENT CARTE GOOGLE ==================
-function loadGoogleMap() {
-    const mapPlaceholder = document.getElementById('map-placeholder');
-    if (!mapPlaceholder) return;
-    
-    const iframe = document.createElement('iframe');
-    iframe.width = '100%';
-    iframe.height = '400';
-    iframe.loading = 'lazy';
-    iframe.allowFullscreen = true;
-    iframe.src = 'https://maps.google.com/maps?q=3.8546926,11.4898802&hl=fr&z=15&output=embed';
-    
-    mapPlaceholder.innerHTML = '';
-    mapPlaceholder.appendChild(iframe);
-}
 
 // ================== INITIALISATION ==================
 document.addEventListener('DOMContentLoaded', function() {

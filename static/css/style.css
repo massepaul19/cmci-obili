@@ -74,6 +74,172 @@
 	    --shadow-medium: rgba(0, 0, 0, 0.4);
 	    --shadow-heavy: rgba(0, 0, 0, 0.6);
 	}
+	
+	/*rouge*/
+	[data-theme="red"] {
+	    --primary-color: #f44336;
+	    --primary-light: #e57373;
+	    --primary-dark: #d32f2f;
+	    --secondary-color: #ef5350;
+	    --accent-color: #ff8a80;
+	    --light-bg: #ffebee;
+	    --medium-bg: #ef9a9a;
+	    --dark-text: #b71c1c;
+	    --border-color: #ffcdd2;
+	    --hover-bg: #ffeeee;
+	    --shadow-color: rgba(244, 67, 54, 0.3);
+	    --shadow-light: rgba(244, 67, 54, 0.1);
+	    --shadow-medium: rgba(244, 67, 54, 0.2);
+	    --shadow-heavy: rgba(244, 67, 54, 0.4);
+	}
+
+	/*rose*/
+	[data-theme="pink"] {
+	    --primary-color: #e91e63;
+	    --primary-light: #f48fb1;
+	    --primary-dark: #c2185b;
+	    --secondary-color: #f06292;
+	    --accent-color: #ff80ab;
+	    --light-bg: #fce4ec;
+	    --medium-bg: #f8bbd0;
+	    --dark-text: #880e4f;
+	    --border-color: #f8bbd0;
+	    --hover-bg: #fff0f6;
+	    --shadow-color: rgba(233, 30, 99, 0.3);
+	    --shadow-light: rgba(233, 30, 99, 0.1);
+	    --shadow-medium: rgba(233, 30, 99, 0.2);
+	    --shadow-heavy: rgba(233, 30, 99, 0.4);
+	}
+
+	/*vert citron*/
+	[data-theme="lime"] {
+	    --primary-color: #cddc39;
+	    --primary-light: #dce775;
+	    --primary-dark: #afb42b;
+	    --secondary-color: #d4e157;
+	    --accent-color: #8bc34a;
+	    --light-bg: #f9fbe7;
+	    --medium-bg: #dce775;
+	    --dark-text: #827717;
+	    --border-color: #e6ee9c;
+	    --hover-bg: #f4fce3;
+	    --shadow-color: rgba(205, 220, 57, 0.3);
+	    --shadow-light: rgba(205, 220, 57, 0.1);
+	    --shadow-medium: rgba(205, 220, 57, 0.2);
+	    --shadow-heavy: rgba(205, 220, 57, 0.4);
+	}
+
+	
+	/*orange*/
+	[data-theme="orange"] {
+	    --primary-color: #ff9800;
+	    --primary-light: #ffb74d;
+	    --primary-dark: #f57c00;
+	    --secondary-color: #ffa726;
+	    --accent-color: #ffcc80;
+	    --light-bg: #fff3e0;
+	    --medium-bg: #ffe0b2;
+	    --dark-text: #e65100;
+	    --border-color: #ffe0b2;
+	    --hover-bg: #fff8e1;
+	    --shadow-color: rgba(255, 152, 0, 0.3);
+	    --shadow-light: rgba(255, 152, 0, 0.1);
+	    --shadow-medium: rgba(255, 152, 0, 0.2);
+	    --shadow-heavy: rgba(255, 152, 0, 0.4);
+	}
+
+	/*violet*/
+	[data-theme="purple"] {
+	    --primary-color: #9c27b0;
+	    --primary-light: #ce93d8;
+	    --primary-dark: #7b1fa2;
+	    --secondary-color: #ab47bc;
+	    --accent-color: #e1bee7;
+	    --light-bg: #f3e5f5;
+	    --medium-bg: #e1bee7;
+	    --dark-text: #4a148c;
+	    --border-color: #e1bee7;
+	    --hover-bg: #faf0ff;
+	    --shadow-color: rgba(156, 39, 176, 0.3);
+	    --shadow-light: rgba(156, 39, 176, 0.1);
+	    --shadow-medium: rgba(156, 39, 176, 0.2);
+	    --shadow-heavy: rgba(156, 39, 176, 0.4);
+	}
+
+	
+	/*Thème Cyan (Futuriste & Rafraîchissant)*/
+	[data-theme="cyan"] {
+	    --primary-color: #00bcd4;
+	    --primary-light: #4dd0e1;
+	    --primary-dark: #0097a7;
+	    --secondary-color: #26c6da;
+	    --accent-color: #b2ebf2;
+	    --light-bg: #e0f7fa;
+	    --medium-bg: #b2ebf2;
+	    --dark-text: #006064;
+	    --border-color: #b2ebf2;
+	    --hover-bg: #f0feff;
+	    --shadow-color: rgba(0, 188, 212, 0.3);
+	    --shadow-light: rgba(0, 188, 212, 0.1);
+	    --shadow-medium: rgba(0, 188, 212, 0.2);
+	    --shadow-heavy: rgba(0, 188, 212, 0.4);
+	}
+
+	/*Thème Sable (Naturel & Doux)*/
+	[data-theme="sand"] {
+	    --primary-color: #d4a373;
+	    --primary-light: #f5deb3;
+	    --primary-dark: #a67b5b;
+	    --secondary-color: #e3b27a;
+	    --accent-color: #ffebc6;
+	    --light-bg: #fff8e7;
+	    --medium-bg: #f3e2b3;
+	    --dark-text: #6f4e37;
+	    --border-color: #f5deb3;
+	    --hover-bg: #fffdf5;
+	    --shadow-color: rgba(212, 163, 115, 0.3);
+	    --shadow-light: rgba(212, 163, 115, 0.1);
+	    --shadow-medium: rgba(212, 163, 115, 0.2);
+	    --shadow-heavy: rgba(212, 163, 115, 0.4);
+	}
+
+	
+	/*Thème Menthe (Frais & Minimaliste)*/
+	[data-theme="mint"] {
+	    --primary-color: #4db6ac;
+	    --primary-light: #80cbc4;
+	    --primary-dark: #00796b;
+	    --secondary-color: #26a69a;
+	    --accent-color: #b2dfdb;
+	    --light-bg: #e0f2f1;
+	    --medium-bg: #b2dfdb;
+	    --dark-text: #004d40;
+	    --border-color: #b2dfdb;
+	    --hover-bg: #f1fffd;
+	    --shadow-color: rgba(77, 182, 172, 0.3);
+	    --shadow-light: rgba(77, 182, 172, 0.1);
+	    --shadow-medium: rgba(77, 182, 172, 0.2);
+	    --shadow-heavy: rgba(77, 182, 172, 0.4);
+	}
+
+	/*Thème Or (Élégant & Premium)*/
+	[data-theme="gold"] {
+	    --primary-color: #ffb300;
+	    --primary-light: #ffd54f;
+	    --primary-dark: #ffa000;
+	    --secondary-color: #ffca28;
+	    --accent-color: #ffe082;
+	    --light-bg: #fff8e1;
+	    --medium-bg: #ffe082;
+	    --dark-text: #795548;
+	    --border-color: #ffe082;
+	    --hover-bg: #fffbe7;
+	    --shadow-color: rgba(255, 179, 0, 0.3);
+	    --shadow-light: rgba(255, 179, 0, 0.1);
+	    --shadow-medium: rgba(255, 179, 0, 0.2);
+	    --shadow-heavy: rgba(255, 179, 0, 0.4);
+	}
+
 
 	/* =====================================================
 	   STYLES GÉNÉRAUX
