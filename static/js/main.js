@@ -1,34 +1,53 @@
 // main.js - Fichier principal pour le site CMCI OBILI
-// Version CORRIGÉE - Logo fonctionnel partout + Thèmes persistants
+// Version CORRIGÉE - Logo fonctionnel + Thèmes persistants + Traductions complètes
 
 // ========================================
-// SYSTÈME DE THÈMES - PERSISTANCE
+// SYSTÈME DE THÈMES - PERSISTANCE GLOBALE
 // ========================================
+
+// Charger le thème IMMÉDIATEMENT avant tout
+(function() {
+    const savedTheme = localStorage.getItem('cmci-theme') || 'green';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    console.log('🎨 Thème initial chargé:', savedTheme);
+})();
 
 function changeTheme(theme) {
-    console.log('🎨 Changement vers:', theme);
+    console.log('🎨 Changement de thème vers:', theme);
+    
+    // Appliquer le thème
     document.documentElement.setAttribute('data-theme', theme);
+    
+    // Sauvegarder dans localStorage
     localStorage.setItem('cmci-theme', theme);
-    console.log('💾 Sauvegardé:', localStorage.getItem('cmci-theme'));
+    
+    // Mettre à jour tous les sélecteurs de thème sur la page
+    updateAllThemeSelectors(theme);
+    
+    console.log('✅ Thème sauvegardé et appliqué:', theme);
+}
+
+function updateAllThemeSelectors(theme) {
+    const themeSelectors = document.querySelectorAll('#themeSelector, .theme-selector');
+    themeSelectors.forEach(selector => {
+        if (selector && selector.value !== theme) {
+            selector.value = theme;
+        }
+    });
 }
 
 function loadSavedTheme() {
     const savedTheme = localStorage.getItem('cmci-theme') || 'green';
-    console.log('📦 Chargement du thème:', savedTheme);
+    console.log('📦 Chargement du thème sauvegardé:', savedTheme);
+    
+    // Appliquer le thème
     document.documentElement.setAttribute('data-theme', savedTheme);
     
-    // Mettre à jour le sélecteur après un court délai
-    setTimeout(() => {
-        const themeSelector = document.getElementById('themeSelector');
-        if (themeSelector) {
-            themeSelector.value = savedTheme;
-            console.log('✅ Sélecteur mis à jour:', savedTheme);
-        }
-    }, 100);
+    // Mettre à jour les sélecteurs
+    updateAllThemeSelectors(savedTheme);
+    
+    return savedTheme;
 }
-
-// Charger immédiatement
-loadSavedTheme();
 
 // ========================================
 // PARTIE 1: GÉNÉRATION DES COMPOSANTS
@@ -77,18 +96,18 @@ function getHeader() {
                             <img src="${basePath}static/images/logo.png" alt="Logo CMCI" class="logo-image" onerror="console.error('❌ Erreur chargement logo:', this.src)">
                         </div>
                         <div>
-                            <div class="logo-text">CMCI OBILI</div>
-                            <div class="logo-slogan">Une Église, Une Famille, Une Mission</div>
+                            <div class="logo-text" data-translate="header.title">CMCI OBILI</div>
+                            <div class="logo-slogan" data-translate="header.slogan">Communauté Missionnaire Chrétienne Internationale Obili</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 col-4 text-end">
                     <div class="language-selector">
                         <button class="btn-language active" onclick="changeLanguage('fr')">
-                            <i class="fas fa-globe"></i> <span class="d-none d-md-inline">Français</span>
+                            <i class="fas fa-globe"></i> <span class="d-none d-md-inline" data-translate="header.language.fr">Français</span>
                         </button>
                         <button class="btn-language" onclick="changeLanguage('en')">
-                            <i class="fas fa-globe"></i> <span class="d-none d-md-inline">English</span>
+                            <i class="fas fa-globe"></i> <span class="d-none d-md-inline" data-translate="header.language.en">English</span>
                         </button>
                     </div>
                 </div>
@@ -109,7 +128,7 @@ function getSidebar() {
         <!-- Accueil - Indépendant -->
         <div class="menu-item menu-item-home">
             <a href="${basePath}index.html" class="menu-link" style="text-decoration: none;">
-                <span><i class="fas fa-home"></i> Accueil</span>
+                <span><i class="fas fa-home"></i> <span data-translate="nav.home">Accueil</span></span>
             </a>
         </div>
 
@@ -120,11 +139,10 @@ function getSidebar() {
         <div class="sidebar-section d-flex align-items-center justify-content-between mb-3">
           <div class="sidebar-section-title d-flex align-items-center">
             <i class="fas fa-bars me-2"></i>
-            <span>Thèmes</span>
+            <span data-translate="nav.themes">Thèmes</span>
           </div>
 
           <!-- Sélecteur de thème -->
-		<!-- Sélecteur de thème -->
 		<select class="form-select theme-selector ms-2" id="themeSelector" onchange="changeTheme(this.value)" style="width: 150px;">
 		  <option value="blue">🔵 Bleu</option>
 		  <option value="green">🟢 Vert</option>
@@ -140,77 +158,77 @@ function getSidebar() {
 		  <option value="mint">💚 Menthe</option>
 		  <option value="gold">🟡 Or</option>
 		</select>
-
 	  </div>
 
         <div class="menu-item">
             <div class="menu-link" data-submenu="organisation">
-                <span><i class="fas fa-sitemap"></i> Organisation</span>
+                <span><i class="fas fa-sitemap"></i> <span data-translate="nav.organisation">Organisation</span></span>
                 <i class="fas fa-chevron-right chevron"></i>
             </div>
             <div class="submenu" id="submenu-organisation">
-                <a href="${basePath}organisation/historique.html" class="submenu-link">Historique</a>
-                <a href="${basePath}organisation/qui-sommes-nous.html" class="submenu-link">Qui sommes-nous</a>
-                <a href="${basePath}organisation/vision.html" class="submenu-link">Notre Vision</a>
-                <a href="${basePath}organisation/mission.html" class="submenu-link">Notre Mission</a>
+                <a href="${basePath}organisation/historique.html" class="submenu-link" data-translate="submenu.historique">Notre Histoire</a>
+                <a href="${basePath}organisation/croyance.html" class="submenu-link" data-translate="submenu.croyance">Nos Croyances</a>
+                <a href="${basePath}organisation/qui-sommes-nous.html" class="submenu-link" data-translate="submenu.qui-sommes-nous">Qui sommes-nous</a>
+                <a href="${basePath}organisation/vision.html" class="submenu-link" data-translate="submenu.vision">Notre Vision</a>
+                <a href="${basePath}organisation/mission.html" class="submenu-link" data-translate="submenu.mission">Notre Mission</a>
             </div>
         </div>
 
         <div class="menu-item">
             <div class="menu-link" data-submenu="departements">
-                <span><i class="fas fa-users"></i> Départements</span>
+                <span><i class="fas fa-users"></i> <span data-translate="nav.departements">Départements</span></span>
                 <i class="fas fa-chevron-right chevron"></i>
             </div>
             <div class="submenu" id="submenu-departements">
-                <a href="${basePath}departements/priere.html" class="submenu-link">Département de Prière</a>
-                <a href="${basePath}departements/communication.html" class="submenu-link">Département Communication</a>
-                <a href="${basePath}departements/protocole.html" class="submenu-link">Département Protocole</a>
-                <a href="${basePath}departements/jeunesse.html" class="submenu-link">Département Jeunesse</a>
-                <a href="${basePath}departements/musique.html" class="submenu-link">Département Musique</a>
+                <a href="${basePath}departements/priere.html" class="submenu-link" data-translate="submenu.priere">Département de Prière</a>
+                <a href="${basePath}departements/communication.html" class="submenu-link" data-translate="submenu.communication">Département Communication</a>
+                <a href="${basePath}departements/protocole.html" class="submenu-link" data-translate="submenu.protocole">Département Protocole</a>
+                <a href="${basePath}departements/jeunesse.html" class="submenu-link" data-translate="submenu.jeunesse">Département Jeunesse</a>
+                <a href="${basePath}departements/musique.html" class="submenu-link" data-translate="submenu.musique">Département Musique</a>
             </div>
         </div>
 
         <div class="menu-item">
             <div class="menu-link" data-submenu="evangelisation">
-                <span><i class="fas fa-hands-praying"></i> Évangélisation</span>
+                <span><i class="fas fa-hands-praying"></i> <span data-translate="nav.evangelisation">Évangélisation</span></span>
                 <i class="fas fa-chevron-right chevron"></i>
             </div>
             <div class="submenu" id="submenu-evangelisation">
-                <a href="${basePath}evangelisation/missions-locales.html" class="submenu-link">Missions locales</a>
-                <a href="${basePath}evangelisation/missions-internationales.html" class="submenu-link">Missions internationales</a>
-                <a href="${basePath}evangelisation/programmes.html" class="submenu-link">Programmes d'évangélisation</a>
-                <a href="${basePath}evangelisation/temoignages.html" class="submenu-link">Témoignages</a>
+                <a href="${basePath}evangelisation/missions-locales.html" class="submenu-link" data-translate="submenu.missions-locales">Missions locales</a>
+                <a href="${basePath}evangelisation/missions-internationales.html" class="submenu-link" data-translate="submenu.missions-internationales">Missions internationales</a>
+                <a href="${basePath}evangelisation/programmes.html" class="submenu-link" data-translate="submenu.programmes">Programmes d'évangélisation</a>
+                <a href="${basePath}evangelisation/temoignages.html" class="submenu-link" data-translate="submenu.temoignages">Témoignages</a>
             </div>
         </div>
 
         <div class="menu-item">
             <div class="menu-link" data-submenu="messages">
-                <span><i class="fas fa-book-open"></i> Messages</span>
+                <span><i class="fas fa-book-open"></i> <span data-translate="nav.messages">Messages</span></span>
                 <i class="fas fa-chevron-right chevron"></i>
             </div>
             <div class="submenu" id="submenu-messages">
-                <a href="${basePath}messages/audio.html" class="submenu-link">Messages Audio</a>
-                <a href="${basePath}messages/video.html" class="submenu-link">Messages Vidéo</a>
-                <a href="${basePath}messages/ecrits.html" class="submenu-link">Messages Écrits</a>
-                <a href="${basePath}messages/etudes-bibliques.html" class="submenu-link">Études Bibliques</a>
+                <a href="${basePath}messages/audio.html" class="submenu-link" data-translate="submenu.audio">Messages Audio</a>
+                <a href="${basePath}messages/video.html" class="submenu-link" data-translate="submenu.video">Messages Vidéo</a>
+                <a href="${basePath}messages/ecrits.html" class="submenu-link" data-translate="submenu.ecrits">Messages Écrits</a>
+                <a href="${basePath}messages/etudes-bibliques.html" class="submenu-link" data-translate="submenu.etudes">Études Bibliques</a>
             </div>
         </div>
 
         <div class="menu-item">
             <div class="menu-link" data-submenu="evenements">
-                <span><i class="fas fa-calendar-alt"></i> Événements</span>
+                <span><i class="fas fa-calendar-alt"></i> <span data-translate="nav.evenements">Événements</span></span>
                 <i class="fas fa-chevron-right chevron"></i>
             </div>
             <div class="submenu" id="submenu-evenements">
-                <a href="${basePath}evenements/a-venir.html" class="submenu-link">Événements à venir</a>
-                <a href="${basePath}evenements/passes.html" class="submenu-link">Événements passés</a>
-                <a href="${basePath}evenements/programmes-speciaux.html" class="submenu-link">Programmes spéciaux</a>
+                <a href="${basePath}evenements/a-venir.html" class="submenu-link" data-translate="submenu.a-venir">Événements à venir</a>
+                <a href="${basePath}evenements/passes.html" class="submenu-link" data-translate="submenu.passes">Événements passés</a>
+                <a href="${basePath}evenements/programmes-speciaux.html" class="submenu-link" data-translate="submenu.speciaux">Programmes spéciaux</a>
             </div>
         </div>
 
         <div class="menu-item">
             <a href="${basePath}contact.html" class="menu-link" style="text-decoration: none;">
-                <span><i class="fas fa-envelope"></i> Contactez-nous</span>
+                <span><i class="fas fa-envelope"></i> <span data-translate="nav.contact">Contactez-nous</span></span>
             </a>
         </div>
 
@@ -220,7 +238,7 @@ function getSidebar() {
         <!-- Réseaux sociaux en bas -->
         <div class="sidebar-social">
             <div class="sidebar-section-title">
-                <i class="fas fa-share-alt"></i> Suivez-nous
+                <i class="fas fa-share-alt"></i> <span data-translate="nav.follow">Suivez-nous</span>
             </div>
             <div class="sidebar-social-links">
                 <a href="#" class="sidebar-social-link" title="Facebook">
@@ -251,8 +269,8 @@ function getFooter() {
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 mb-3 mb-md-4">
-                    <h5 class="footer-title"><i class="fas fa-church"></i> CMCI OBILI</h5>
-                    <p class="footer-text">Une communauté de foi dédiée à l'adoration, à la croissance spirituelle et au service de Dieu et de notre prochain.</p>
+                    <h5 class="footer-title"><i class="fas fa-church"></i> <span data-translate="footer.about.title">CMCI OBILI</span></h5>
+                    <p class="footer-text" data-translate="footer.about.text">Une communauté de foi dédiée à l'adoration, à la croissance spirituelle et au service de Dieu et de notre prochain.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
@@ -261,39 +279,40 @@ function getFooter() {
                     </div>
                 </div>
                 <div class="col-6 col-md-4 mb-3 mb-md-4">
-                    <h5 class="footer-title"><i class="fas fa-link"></i> Liens Rapides</h5>
+                    <h5 class="footer-title"><i class="fas fa-link"></i> <span data-translate="footer.links.title">Liens Rapides</span></h5>
                     <ul class="footer-links">
-                        <li><a href="${basePath}index.html"><i class="fas fa-angle-right"></i> Accueil</a></li>
-                        <li><a href="${basePath}organisation/qui-sommes-nous.html"><i class="fas fa-angle-right"></i> Qui sommes-nous</a></li>
-                        <li><a href="${basePath}messages/audio.html"><i class="fas fa-angle-right"></i> Messages</a></li>
-                        <li><a href="${basePath}evenements/a-venir.html"><i class="fas fa-angle-right"></i> Événements</a></li>
-                        <li><a href="${basePath}contact.html"><i class="fas fa-angle-right"></i> Contact</a></li>
+                        <li><a href="${basePath}index.html"><i class="fas fa-angle-right"></i> <span data-translate="footer.links.home">Accueil</span></a></li>
+                        <li><a href="${basePath}organisation/qui-sommes-nous.html"><i class="fas fa-angle-right"></i> <span data-translate="footer.links.about">Qui sommes-nous</span></a></li>
+                        <li><a href="${basePath}messages/audio.html"><i class="fas fa-angle-right"></i> <span data-translate="footer.links.messages">Messages</span></a></li>
+                        <li><a href="${basePath}evenements/a-venir.html"><i class="fas fa-angle-right"></i> <span data-translate="footer.links.events">Événements</span></a></li>
+                        <li><a href="${basePath}contact.html"><i class="fas fa-angle-right"></i> <span data-translate="footer.links.contact">Contact</span></a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-4 mb-3 mb-md-4">
-                    <h5 class="footer-title"><i class="fas fa-map-marker-alt"></i> Contactez-nous</h5>
+                    <h5 class="footer-title"><i class="fas fa-map-marker-alt"></i> <span data-translate="footer.contact.title">Contactez-nous</span></h5>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-map-marker-alt"></i><span>Obili, Yaoundé, Cameroun</span></li>
-                        <li><i class="fas fa-phone"></i><span>+237 XXX XXX XXX</span></li>
-                        <li><i class="fas fa-envelope"></i><span>contact@cmciobili.org</span></li>
-                        <li><i class="fas fa-clock"></i><span>Cultes: Dimanche 8h - 12h</span></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span data-translate="footer.contact.address">Obili, Yaoundé, Cameroun</span></li>
+                        <li><i class="fas fa-phone"></i><span data-translate="footer.contact.phone">+237 677 29 32 34</span></li>
+                        <li><i class="fas fa-envelope"></i><span data-translate="footer.contact.email">cmciobili@gmail.com</span></li>
+                        <li><i class="fas fa-clock"></i><span data-translate="footer.contact.schedule">Cultes: Dimanche 8h - 12h</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <div class="row">
-                    <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0"><p>&copy; 2025 CMCI OBILI. Tous droits réservés.</p></div>
+                    <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <p>&copy; 2025 CMCI OBILI. <span data-translate="footer.copyright">Tous droits réservés.</span></p>
+                    </div>
                  </div>
             </div>
              <div class="footer-bottom">
                     <div class="col-12 col-md-6 text-center text-md-end">
-          <p>
+          <p data-translate="footer.verse">
             « Il y a diversité de dons, mais le même Esprit ; diversité de services, mais le même Seigneur.  
-            Ensemble, nous formons un seul corps pour la gloire de Dieu. »  
-            
-                  <br><em>— 1 Corinthiens 12:4-5</em><br>
+            Ensemble, nous formons un seul corps pour la gloire de Dieu. »
           </p>
-          	  <br><i class="fas fa-heart" style="color: #c6d647;"></i> Toute la gloire à Dieu.
+          <p><em>— <span data-translate="footer.verse.ref">1 Corinthiens 12:4-5</span></em></p>
+          <p><i class="fas fa-heart" style="color: #c6d647;"></i> <span data-translate="footer.glory">Toute la gloire à Dieu.</span></p>
                   </div>
               </div>
         </div>
@@ -330,10 +349,16 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('✅ Footer chargé');
     }
     
-    // Réappliquer le thème après chargement du header
+    // Réappliquer le thème et initialiser les traductions
     setTimeout(() => {
         loadSavedTheme();
         initializeApp();
+        
+        // Forcer la traduction des éléments communs après chargement
+        if (window.translator) {
+            window.translator.translateCommonElements();
+            console.log('✅ Traductions communes appliquées');
+        }
     }, 200);
 });
 
@@ -465,7 +490,6 @@ function loadGoogleMap() {
     mapPlaceholder.innerHTML = '';
     mapPlaceholder.appendChild(iframe);
 }
-
 
 // Animation scroll
 function animateOnScroll() {

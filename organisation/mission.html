@@ -3,30 +3,490 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">Notre Mission - CMCI OBILI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <title>Mission - CMCI OBILI</title>
     <link rel="stylesheet" href="../static/css/style.css">
-    <script src="https://kit.fontawesome.com/a2e0e9f6e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEADER (chargé automatiquement) -->
+    <!-- HEADER -->
     <div id="header-placeholder"></div>
+
+    <!-- Bouton Menu -->
     <button class="menu-toggle" id="menuToggle"></button>
+
+    <!-- Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
     <div id="sidebar-placeholder"></div>
 
-    <div id="contentArea">
-        <h1>Mission</h1>
-        <p style="text-align:center;">Contenu à venir...</p>
+    <!-- CONTENU PRINCIPAL -->
+    <div class="content-area" id="contentArea">
+        <div class="welcome-text">
+            <h1>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.title">Un Mouvement Missionnaire</span>
+                <span class="accent-dot"></span>
+            </h1>
+            <p data-translate="mission.intro">
+                C'est au début de ce que nous connaissons aujourd'hui comme le 
+                livre en tant que déclaration du prophète Habacuc.
+            </p>
+        </div>
+
+        <!-- Image d'en-tête -->
+        <div class="text-center mb-4">
+            <img src="static/images/mission/mission-header.jpg" alt="Notre Mission" class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
+        </div>
+
+        <!-- Notre Appel Missionnaire -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.call.title">Notre Appel Missionnaire</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <p data-translate="mission.call.text1">
+                        "Car les dons et l'appel de Dieu sont irrévocables" (Romains 11:29). 
+                        Ainsi que nous croyons qu'une poignée de croyants fraîchement convertis 
+                        dans une seule ville où il n'existe pas déjà une autre église, ne doit 
+                        pas rester dans cette ville sans faire d'autres églises locales et nations 
+                        du monde.
+                    </p>
+                    <p data-translate="mission.call.text2">
+                        Nous avons reçu l'ordre d'aller dans toutes les régions et dans d'autres 
+                        nations du monde. Depuis la région de notre pays et dans d'autres nations. 
+                        Nous avons commencé à implanter des églises dans d'autres régions. Nous 
+                        avons envoyé et envoyons à travers les missionnaires internationaux.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <img src="static/images/mission/call.jpg" alt="Appel Missionnaire" class="img-fluid rounded" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Expansion et Implantation -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.expansion.title">L'Expansion du Royaume de Dieu</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="text-center mb-4">
+                <img src="static/images/mission/expansion.jpg" alt="Expansion" class="img-fluid rounded" style="max-height: 350px;">
+            </div>
+
+            <p data-translate="mission.expansion.text1">
+                Nous avons continué à suivre un Cameroun les nations. Ils faisaient des 
+                disciples de Jésus-Christ et les formaient à devenir des missionnaires. 
+                En 1972, nous avons envoyé à Douala nos premiers missionnaires. En 1993, 
+                nous avons envoyé de Dénikoulane à Elisabeth Bosse en République démocratique 
+                du Congo.
+            </p>
+
+            <p data-translate="mission.expansion.text2">
+                La section dissidente a déménagé à Bertoua, dans la région de l'Est du 
+                Cameroun, où elle a installé son quartier général. En 2012, nous avons 
+                tenu notre première convention internationale après le schisme.
+            </p>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="mission.expansion.subtitle">
+                Nos missions dans le monde :
+            </h4>
+            
+            <div class="row mt-3">
+                <div class="col-md-4 mb-3">
+                    <div class="worship-schedule-card text-center">
+                        <i class="fas fa-globe-africa" style="font-size: 50px; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h5 data-translate="mission.expansion.africa">Afrique</h5>
+                        <p data-translate="mission.expansion.africa.desc">
+                            Cameroun, Côte d'Ivoire, Gabon, Ghana, Mozambique
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="worship-schedule-card text-center">
+                        <i class="fas fa-globe-europe" style="font-size: 50px; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h5 data-translate="mission.expansion.europe">Europe</h5>
+                        <p data-translate="mission.expansion.europe.desc">
+                            Allemagne et autres nations
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="worship-schedule-card text-center">
+                        <i class="fas fa-globe-asia" style="font-size: 50px; color: var(--primary-color); margin-bottom: 15px;"></i>
+                        <h5 data-translate="mission.expansion.asia">Asie</h5>
+                        <p data-translate="mission.expansion.asia.desc">
+                            Inde et régions environnantes
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formation Missionnaire -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.training.title">Formation des Missionnaires</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4 text-center mb-3">
+                    <img src="static/images/mission/training.jpg" alt="Formation" class="img-fluid rounded" style="max-height: 250px;">
+                </div>
+                <div class="col-md-8">
+                    <p data-translate="mission.training.text">
+                        À la CMCI, nous renouons de près relisons le fait que les missionnaires 
+                        doivent être formés pour les besoins locaux et de notre être pour des 
+                        besoins. Nous réitérons l'Évangile, les individus, des villages, des 
+                        villes et les nations.
+                    </p>
+                    <p data-translate="mission.training.text2">
+                        Nous édifions et enseignons les frères à être avec les sélectionnaires 
+                        constamment ceux qui peuvent représenter les églises et d'autres parties 
+                        et servir le Christ et Son Évangile sur le champ de mission du monde.
+                    </p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="mission.training.areas">
+                Domaines de formation :
+            </h4>
+            <ul style="color: #555; line-height: 2;">
+                <li data-translate="mission.training.point1">
+                    <strong>Former et envoyer les missionnaires</strong>
+                </li>
+                <li data-translate="mission.training.point2">
+                    <strong>Pourvoir à la main-d'œuvre</strong> pour le champ missionnaire
+                </li>
+                <li data-translate="mission.training.point3">
+                    <strong>Produire la littérature chrétienne</strong> dans les lieux, des 
+                    nations et des continents non chrétiens
+                </li>
+                <li data-translate="mission.training.point4">
+                    <strong>Organiser des activités missionnaires</strong> à court terme
+                </li>
+            </ul>
+        </div>
+
+        <!-- Nos Fonds Missionnaires -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.funds.title">Nos Fonds Missionnaires</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="text-center mb-4">
+                <img src="static/images/mission/funds.jpg" alt="Fonds Missionnaires" class="img-fluid rounded" style="max-height: 300px;">
+            </div>
+
+            <p data-translate="mission.funds.intro">
+                En tant qu'individus et en tant qu'églises locales, nous donnons pour les 
+                besoins locaux, mais aussi pour les besoins nationaux et internationaux de 
+                l'Église.
+            </p>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="mission.funds.types">
+                Types de Fonds :
+            </h4>
+            
+            <div class="row mt-3">
+                <div class="col-md-6 mb-3">
+                    <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                        <h5 style="color: var(--primary-color);">
+                            <i class="fas fa-home"></i> 
+                            <span data-translate="mission.funds.local">Fonds de l'Église/Assemblée locale</span>
+                        </h5>
+                        <p data-translate="mission.funds.local.desc">
+                            Pour les besoins et l'entretien de l'église locale
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                        <h5 style="color: var(--primary-color);">
+                            <i class="fas fa-flag"></i>
+                            <span data-translate="mission.funds.national">Fonds Missionnaire National</span>
+                        </h5>
+                        <p data-translate="mission.funds.national.desc">
+                            Pour soutenir les missions au niveau national
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                        <h5 style="color: var(--primary-color);">
+                            <i class="fas fa-globe"></i>
+                            <span data-translate="mission.funds.international">Fonds Missionnaire International</span>
+                        </h5>
+                        <p data-translate="mission.funds.international.desc">
+                            Lorsque les églises locales reçoivent des dons et les offrandes de leurs 
+                            membres, elles versent toujours un pourcentage à leurs deux autres fonds 
+                            missionnaires nationaux et internationaux.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stratégie Missionnaire -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.strategy.title">Notre Stratégie Missionnaire</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h4 style="color: var(--primary-color);" data-translate="mission.strategy.subtitle">
+                        Actions Missionnaires :
+                    </h4>
+                    <ul style="color: #555; line-height: 2; margin-top: 20px;">
+                        <li data-translate="mission.strategy.point1">
+                            <strong>Attendre les perdus</strong> par la base des Cellules
+                        </li>
+                        <li data-translate="mission.strategy.point2">
+                            <strong>Créer et entretenir</strong> les sites Web de sensibilisation où les 
+                            brebis assemblées pourraient rencontrer le Seigneur Jésus
+                        </li>
+                        <li data-translate="mission.strategy.point3">
+                            <strong>Organiser des programmes</strong> de sensibilisation à la radio et 
+                            la télévision
+                        </li>
+                        <li data-translate="mission.strategy.point4">
+                            <strong>Financer d'autres ministères</strong> qui œuvrent pour les âmes 
+                            perdues dans les régions et d'autres nations du monde
+                        </li>
+                        <li data-translate="mission.strategy.point5">
+                            Etc. Selon que le Seigneur nous conduira. En tant qu'individus, chaque 
+                            croyant doit travailler et établir constamment là où il va
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <img src="static/images/mission/strategy.jpg" alt="Stratégie" class="img-fluid rounded" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Nos Priorités -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="mission.priorities.title">Nos Priorités Missionnaires</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="text-center mb-4">
+                <img src="static/images/mission/priorities.jpg" alt="Priorités" class="img-fluid rounded" style="max-height: 300px;">
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-book-open"></i>
+                            <span data-translate="mission.priorities.gospel">Proclamer l'Évangile</span>
+                        </h5>
+                        <p data-translate="mission.priorities.gospel.desc">
+                            Annoncer la Bonne Nouvelle du Royaume de Dieu dans le monde entier
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-church"></i>
+                            <span data-translate="mission.priorities.churches">Implanter des Églises</span>
+                        </h5>
+                        <p data-translate="mission.priorities.churches.desc">
+                            Établir des communautés de croyants dans toutes les nations
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-users"></i>
+                            <span data-translate="mission.priorities.disciples">Former des Disciples</span>
+                        </h5>
+                        <p data-translate="mission.priorities.disciples.desc">
+                            Édifier et équiper les croyants pour le service du Seigneur
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-hands-helping"></i>
+                            <span data-translate="mission.priorities.serve">Servir avec Amour</span>
+                        </h5>
+                        <p data-translate="mission.priorities.serve.desc">
+                            Manifester l'amour de Christ à travers le service et la compassion
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verset -->
+        <div class="content-card verse-card">
+            <h2>
+                <i class="fas fa-bible"></i>
+                <span data-translate="mission.verse.title">Notre Commission</span>
+            </h2>
+            <div class="section-divider verse-divider"></div>
+            <p class="verse-text" data-translate="mission.verse.text">
+                "Allez par tout le monde, et prêchez la bonne nouvelle à toute la création. 
+                Celui qui croira et qui sera baptisé sera sauvé, mais celui qui ne croira pas 
+                sera condamné."
+            </p>
+            <p class="verse-reference">
+                - <span data-translate="mission.verse.reference">Marc 16:15-16</span>
+            </p>
+        </div>
     </div>
 
-    <!-- FOOTER (chargé automatiquement) -->
+    <!-- FOOTER -->
     <div id="footer-placeholder"></div>
 
-    <!-- Styles additionnels pour cette page -->
+        <!-- Styles additionnels pour cette page -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="../static/js/translator.js"></script>
     <script src="../static/js/main.js"></script> 
+    
+    <script>
+        const missionTranslations = {
+            fr: {
+                "page.title": "Notre Mission - CMCI OBILI",
+                "mission.title": "Un Mouvement Missionnaire",
+                "mission.intro": "C'est au début de ce que nous connaissons aujourd'hui comme le livre en tant que déclaration du prophète Habacuc.",
+                "mission.call.title": "Notre Appel Missionnaire",
+                "mission.call.text1": "\"Car les dons et l'appel de Dieu sont irrévocables\" (Romains 11:29). Ainsi que nous croyons qu'une poignée de croyants fraîchement convertis dans une seule ville où il n'existe pas déjà une autre église, ne doit pas rester dans cette ville sans faire d'autres églises locales et nations du monde.",
+                "mission.call.text2": "Nous avons reçu l'ordre d'aller dans toutes les régions et dans d'autres nations du monde. Depuis la région de notre pays et dans d'autres nations. Nous avons commencé à implanter des églises dans d'autres régions. Nous avons envoyé et envoyons à travers les missionnaires internationaux.",
+                "mission.expansion.title": "L'Expansion du Royaume de Dieu",
+                "mission.expansion.text1": "Nous avons continué à suivre un Cameroun les nations. Ils faisaient des disciples de Jésus-Christ et les formaient à devenir des missionnaires. En 1972, nous avons envoyé à Douala nos premiers missionnaires. En 1993, nous avons envoyé de Dénikoulane à Elisabeth Bosse en République démocratique du Congo.",
+                "mission.expansion.text2": "La section dissidente a déménagé à Bertoua, dans la région de l'Est du Cameroun, où elle a installé son quartier général. En 2012, nous avons tenu notre première convention internationale après le schisme.",
+                "mission.expansion.subtitle": "Nos missions dans le monde :",
+                "mission.expansion.africa": "Afrique",
+                "mission.expansion.africa.desc": "Cameroun, Côte d'Ivoire, Gabon, Ghana, Mozambique",
+                "mission.expansion.europe": "Europe",
+                "mission.expansion.europe.desc": "Allemagne et autres nations",
+                "mission.expansion.asia": "Asie",
+                "mission.expansion.asia.desc": "Inde et régions environnantes",
+                "mission.training.title": "Formation des Missionnaires",
+                "mission.training.text": "À la CMCI, nous renouons de près relisons le fait que les missionnaires doivent être formés pour les besoins locaux et de notre être pour des besoins. Nous réitérons l'Évangile, les individus, des villages, des villes et les nations.",
+                "mission.training.text2": "Nous édifions et enseignons les frères à être avec les sélectionnaires constamment ceux qui peuvent représenter les églises et d'autres parties et servir le Christ et Son Évangile sur le champ de mission du monde.",
+                "mission.training.areas": "Domaines de formation :",
+                "mission.training.point1": "Former et envoyer les missionnaires",
+                "mission.training.point2": "Pourvoir à la main-d'œuvre pour le champ missionnaire",
+                "mission.training.point3": "Produire la littérature chrétienne dans les lieux, des nations et des continents non chrétiens",
+                "mission.training.point4": "Organiser des activités missionnaires à court terme",
+                "mission.funds.title": "Nos Fonds Missionnaires",
+                "mission.funds.intro": "En tant qu'individus et en tant qu'églises locales, nous donnons pour les besoins locaux, mais aussi pour les besoins nationaux et internationaux de l'Église.",
+                "mission.funds.types": "Types de Fonds :",
+                "mission.funds.local": "Fonds de l'Église/Assemblée locale",
+                "mission.funds.local.desc": "Pour les besoins et l'entretien de l'église locale",
+                "mission.funds.national": "Fonds Missionnaire National",
+                "mission.funds.national.desc": "Pour soutenir les missions au niveau national",
+                "mission.funds.international": "Fonds Missionnaire International",
+                "mission.funds.international.desc": "Lorsque les églises locales reçoivent des dons et les offrandes de leurs membres, elles versent toujours un pourcentage à leurs deux autres fonds missionnaires nationaux et internationaux.",
+                "mission.strategy.title": "Notre Stratégie Missionnaire",
+                "mission.strategy.subtitle": "Actions Missionnaires :",
+                "mission.strategy.point1": "Attendre les perdus par la base des Cellules",
+                "mission.strategy.point2": "Créer et entretenir les sites Web de sensibilisation où les brebis assemblées pourraient rencontrer le Seigneur Jésus",
+                "mission.strategy.point3": "Organiser des programmes de sensibilisation à la radio et la télévision",
+                "mission.strategy.point4": "Financer d'autres ministères qui œuvrent pour les âmes perdues dans les régions et d'autres nations du monde",
+                "mission.strategy.point5": "Etc. Selon que le Seigneur nous conduira. En tant qu'individus, chaque croyant doit travailler et établir constamment là où il va",
+                "mission.priorities.title": "Nos Priorités Missionnaires",
+                "mission.priorities.gospel": "Proclamer l'Évangile",
+                "mission.priorities.gospel.desc": "Annoncer la Bonne Nouvelle du Royaume de Dieu dans le monde entier",
+                "mission.priorities.churches": "Implanter des Églises",
+                "mission.priorities.churches.desc": "Établir des communautés de croyants dans toutes les nations",
+                "mission.priorities.disciples": "Former des Disciples",
+                "mission.priorities.disciples.desc": "Édifier et équiper les croyants pour le service du Seigneur",
+                "mission.priorities.serve": "Servir avec Amour",
+                "mission.priorities.serve.desc": "Manifester l'amour de Christ à travers le service et la compassion",
+                "mission.verse.title": "Notre Commission",
+                "mission.verse.text": "\"Allez par tout le monde, et prêchez la bonne nouvelle à toute la création. Celui qui croira et qui sera baptisé sera sauvé, mais celui qui ne croira pas sera condamné.\"",
+                "mission.verse.reference": "Marc 16:15-16"
+            },
+            en: {
+                "page.title": "Our Mission - CMCI OBILI",
+                "mission.title": "A Missionary Movement",
+                "mission.intro": "It is at the beginning of what we now know as the book as a declaration of the prophet Habakkuk.",
+                "mission.call.title": "Our Missionary Call",
+                "mission.call.text1": "\"For the gifts and the calling of God are irrevocable\" (Romans 11:29). As we believe that a handful of newly converted believers in a single city where there is no other church, should not remain in that city without establishing other local churches and nations of the world.",
+                "mission.call.text2": "We have been commanded to go to all regions and other nations of the world. From our country's region to other nations. We have begun planting churches in other regions. We have sent and continue to send international missionaries.",
+                "mission.expansion.title": "The Expansion of God's Kingdom",
+                "mission.expansion.text1": "We continued to follow Cameroon to the nations. They were making disciples of Jesus Christ and training them to become missionaries. In 1972, we sent our first missionaries to Douala. In 1993, we sent from Dénikoulane Elisabeth Bosse to the Democratic Republic of Congo.",
+                "mission.expansion.text2": "The dissident faction moved to Bertoua, in the Eastern region of Cameroon, where they established their headquarters. In 2012, we held our first international convention after the schism.",
+                "mission.expansion.subtitle": "Our missions around the world:",
+                "mission.expansion.africa": "Africa",
+                "mission.expansion.africa.desc": "Cameroon, Ivory Coast, Gabon, Ghana, Mozambique",
+                "mission.expansion.europe": "Europe",
+                "mission.expansion.europe.desc": "Germany and other nations",
+                "mission.expansion.asia": "Asia",
+                "mission.expansion.asia.desc": "India and surrounding regions",
+                "mission.training.title": "Missionary Training",
+                "mission.training.text": "At CMFI, we closely recognize the fact that missionaries must be trained for local needs and our being for needs. We reiterate the Gospel, individuals, villages, cities and nations.",
+                "mission.training.text2": "We edify and teach the brothers to be with selectors constantly those who can represent churches and other parties and serve Christ and His Gospel in the mission field of the world.",
+                "mission.training.areas": "Training areas:",
+                "mission.training.point1": "Train and send missionaries",
+                "mission.training.point2": "Provide manpower for the mission field",
+                "mission.training.point3": "Produce Christian literature in places, nations and non-Christian continents",
+                "mission.training.point4": "Organize short-term missionary activities",
+                "mission.funds.title": "Our Missionary Funds",
+                "mission.funds.intro": "As individuals and as local churches, we give for local needs, but also for national and international needs of the Church.",
+                "mission.funds.types": "Types of Funds:",
+                "mission.funds.local": "Local Church/Assembly Fund",
+                "mission.funds.local.desc": "For the needs and maintenance of the local church",
+                "mission.funds.national": "National Missionary Fund",
+                "mission.funds.national.desc": "To support missions at the national level",
+                "mission.funds.international": "International Missionary Fund",
+                "mission.funds.international.desc": "When local churches receive gifts and offerings from their members, they always pay a percentage to their two other national and international missionary funds.",
+                "mission.strategy.title": "Our Missionary Strategy",
+                "mission.strategy.subtitle": "Missionary Actions:",
+                "mission.strategy.point1": "Reach the lost through Cell groups",
+                "mission.strategy.point2": "Create and maintain outreach websites where assembled sheep could meet the Lord Jesus",
+                "mission.strategy.point3": "Organize outreach programs on radio and television",
+                "mission.strategy.point4": "Finance other ministries working for lost souls in regions and other nations of the world",
+                "mission.strategy.point5": "Etc. As the Lord leads us. As individuals, every believer must constantly work and establish wherever they go",
+                "mission.priorities.title": "Our Missionary Priorities",
+                "mission.priorities.gospel": "Proclaim the Gospel",
+                "mission.priorities.gospel.desc": "Announce the Good News of God's Kingdom throughout the world",
+                "mission.priorities.churches": "Plant Churches",
+                "mission.priorities.churches.desc": "Establish communities of believers in all nations",
+                "mission.priorities.disciples": "Train Disciples",
+                "mission.priorities.disciples.desc": "Build up and equip believers for the Lord's service",
+                "mission.priorities.serve": "Serve with Love",
+                "mission.priorities.serve.desc": "Manifest Christ's love through service and compassion",
+                "mission.verse.title": "Our Commission",
+                "mission.verse.text": "\"Go into all the world and preach the gospel to all creation. Whoever believes and is baptized will be saved, but whoever does not believe will be condemned.\"",
+                "mission.verse.reference": "Mark 16:15-16"
+            }
+        };
+        
+        if (window.translator) {
+            window.translator.registerPageTranslations(missionTranslations);
+        }
+    </script>
 </body>
 </html>

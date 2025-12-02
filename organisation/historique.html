@@ -3,30 +3,412 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">Historique - CMCI OBILI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <title>Historique - CMCI OBILI</title>
     <link rel="stylesheet" href="../static/css/style.css">
-    <script src="https://kit.fontawesome.com/a2e0e9f6e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEADER (chargé automatiquement) -->
+    <!-- HEADER -->
     <div id="header-placeholder"></div>
+
+    <!-- Bouton Menu -->
     <button class="menu-toggle" id="menuToggle"></button>
+
+    <!-- Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
     <div id="sidebar-placeholder"></div>
 
-    <div id="contentArea">
-        <h1>Historique</h1>
-        <p style="text-align:center;">Contenu à venir...</p>
+    <!-- CONTENU PRINCIPAL -->
+    <div class="content-area" id="contentArea">
+        <div class="welcome-text">
+            <h1>
+                <span class="accent-dot"></span>
+                <span data-translate="history.title">Notre Historique</span>
+                <span class="accent-dot"></span>
+            </h1>
+            <p data-translate="history.intro">
+                L'histoire de la CMCI est marquée par la fidélité à l'appel de Dieu et l'engagement 
+                à proclamer l'Évangile dans le monde entier.
+            </p>
+        </div>
+
+        <!-- Fondateur -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="history.founder.title">Le Père Fondateur</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-3 text-center mb-3">
+                    <img src="../static/images/organisation/fondateur.png" alt="Professeur Zacharias Tanee Fomum" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                </div>
+                <div class="col-md-9">
+                    <h4 style="color: var(--primary-color);" data-translate="history.founder.name">
+                        Professeur Zacharias Tanee Fomum
+                    </h4>
+                    <p data-translate="history.founder.description">
+                        Le Professeur Zacharias Tanee Fomum est le père fondateur de la Communauté 
+                        Missionnaire Chrétienne Internationale (CMCI). Homme de Dieu, enseignant et 
+                        visionnaire, il a posé les fondations d'un mouvement qui s'étend aujourd'hui 
+                        dans plusieurs nations.
+                    </p>
+                </div>
+            </div>
+
+            <p data-translate="history.founder.ministry">
+                Le ministère du Professeur Fomum a été caractérisé par un enseignement profond de 
+                la Parole de Dieu, une vie de prière intense et un engagement total pour l'évangélisation 
+                mondiale. Son œuvre littéraire compte de nombreux ouvrages qui continuent d'édifier les 
+                croyants à travers le monde.
+            </p>
+        </div>
+
+        <!-- Le Schisme de 2006 -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="history.schism.title">Un Tournant Historique - 2006</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <p data-translate="history.schism.context">
+                Après le décès du Professeur Zacharias Tanee Fomum le 14 mars 2009, un schisme 
+                s'est produit au sein du ministère. La faction dissidente a déménagé à Bertoua, 
+                dans la région de l'Est du Cameroun, où elle a installé son quartier général.
+            </p>
+
+            <p data-translate="history.schism.separation">
+                En 2012, la Communauté Missionnaire Chrétienne Internationale a tenu sa première 
+                convention internationale après le schisme. Cette concertation a permis d'affirmer 
+                les résolutions et déclarations qui ont été prises à la fin de la convention et de 
+                la concertation missionnaire tenue à Yaoundé du 26 au 30 Novembre 2012.
+            </p>
+        </div>
+
+        <!-- Leadership Actuel -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="history.leadership.title">Leadership International</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-3 text-center mb-3">
+                    <img src="../static/images/organisation/president.png" alt="Président International" class="img-fluid rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                </div>
+                <div class="col-md-9">
+                    <h4 style="color: var(--primary-color);" data-translate="history.leadership.president">
+                        Président International
+                    </h4>
+                    <h5 data-translate="history.leadership.name">Frère-Joseph Tanyï Mbofor</h5>
+                    <p data-translate="history.leadership.role">
+                        Leader et Coordinateur de la Communauté Missionnaire Chrétienne Internationale 
+                        et ses Églises Associées.
+                    </p>
+                </div>
+            </div>
+
+            <p data-translate="history.leadership.description">
+                Sous la direction du Président International, la CMCI poursuit sa mission d'évangélisation 
+                et d'implantation d'églises à travers le monde, fidèle à la vision du fondateur.
+            </p>
+        </div>
+
+        <!-- Expansion Géographique -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="history.expansion.title">Notre Expansion</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <p data-translate="history.expansion.intro">
+                La CMCI s'est développée progressivement en implantant des églises dans différentes 
+                régions du Cameroun et du monde. Nous proclamons l'Évangile et établissons des 
+                communautés de croyants fidèles à la Parole de Dieu.
+            </p>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="history.expansion.countries">
+                Pays où la CMCI est présente :
+            </h4>
+            
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <ul style="color: #555; line-height: 2;">
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.cameroon">Cameroun</span></li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.ivory">Côte d'Ivoire</span></li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.gabon">Gabon</span></li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.germany">Allemagne</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul style="color: #555; line-height: 2;">
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.ghana">Ghana</span></li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.india">Inde</span></li>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--primary-color);"></i> 
+                            <span data-translate="history.expansion.mozambique">Mozambique</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;" data-translate="history.expansion.growth">
+                Ces différents pays se sont progressivement représentés dans notre mouvement missionnaire, 
+                témoignant de la fidélité de Dieu et de son œuvre à travers notre communauté.
+            </p>
+        </div>
+
+        <!-- Concertation de Yaoundé 2012 -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="history.concertation.title">Concertation de Yaoundé - 2012</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                <h5 style="color: var(--primary-color);" data-translate="history.concertation.event">
+                    <i class="fas fa-calendar-alt"></i> 26-30 Novembre 2012 - Yaoundé
+                </h5>
+                <p data-translate="history.concertation.subtitle">
+                    Déclarations et Résolutions
+                </p>
+            </div>
+
+            <p data-translate="history.concertation.intro">
+                Cette concertation historique a rassemblé les Églises Associées de la CMCI pour 
+                affirmer notre vision commune et notre engagement envers le Royaume de Dieu et le 
+                Seigneur Jésus-Christ.
+            </p>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="history.concertation.declarations">
+                Principales Déclarations :
+            </h4>
+            
+            <ul style="color: #555; line-height: 2; margin-top: 20px;">
+                <li data-translate="history.concertation.dec1">
+                    <strong>Notre Mission et l'Expansion du Royaume de Dieu</strong> dans les cœurs des Hommes
+                </li>
+                <li data-translate="history.concertation.dec2">
+                    <strong>Notre Vision</strong> : Le Royaume de Dieu
+                </li>
+                <li data-translate="history.concertation.dec3">
+                    Nous nous réunissons au nom de <strong>Jésus-Christ et en Son Nom Seul</strong>
+                </li>
+                <li data-translate="history.concertation.dec4">
+                    L'Assemblée doit être <strong>Centrée sur Jésus</strong> et sur Son Royaume Uniquement
+                </li>
+                <li data-translate="history.concertation.dec5">
+                    Nous reconnaissons que toute la <strong>Parole de Dieu Est Juste</strong> et qu'elle 
+                    contient des vérités éternelles et encourageantes
+                </li>
+                <li data-translate="history.concertation.dec6">
+                    Nous confirmons les Organes : <strong>Le Frère-Joseph Tanyï Mbofor</strong> comme Leader 
+                    et Coordinateur de la CMCI et Ses Églises Associées
+                </li>
+                <li data-translate="history.concertation.dec7">
+                    Les Églises locales sont <strong>Autonomes</strong> et sous la direction du Corps des Anciens
+                </li>
+                <li data-translate="history.concertation.dec8">
+                    Bien qu'elles soient Autonomes, les Églises locales sont <strong>Interdépendantes</strong>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Structure et Gouvernance -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="history.governance.title">Structure et Gouvernance</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <p data-translate="history.governance.intro">
+                La CMCI fonctionne selon une structure d'églises locales autonomes mais interdépendantes, 
+                dirigées par le Saint-Esprit à travers les Anciens de chaque église locale.
+            </p>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="history.governance.principles">
+                Principes de Gouvernance :
+            </h4>
+            
+            <ul style="color: #555; line-height: 2; margin-top: 20px;">
+                <li data-translate="history.governance.p1">
+                    <strong>Deux Ailes de la Direction</strong> : Un Leadership Local/Résidant appelé 
+                    Corps des Anciens et Un leadership Non Résidant appelé Équipes Apostoliques
+                </li>
+                <li data-translate="history.governance.p2">
+                    Conduits par le Saint-Esprit, les Anciens de l'église Locale doivent envoyer des 
+                    <strong>Équipes Apostoliques</strong>
+                </li>
+                <li data-translate="history.governance.p3">
+                    Les Équipes Apostoliques doivent rendre compte aux églises qui les ont envoyées
+                </li>
+                <li data-translate="history.governance.p4">
+                    La relation des Anciens doit être basée dans la différence d'âges et d'expérience 
+                    du ministère chrétien
+                </li>
+                <li data-translate="history.governance.p5">
+                    Le Seigneur Jésus et Son Royaume sont notre seule Bannière. Nous ne créons pas 
+                    d'autre Bannière en Son sein ni en non
+                </li>
+            </ul>
+        </div>
+
+        <!-- Verset -->
+        <div class="content-card verse-card">
+            <h2>
+                <i class="fas fa-bible"></i>
+                <span data-translate="history.verse.title">Parole de Dieu</span>
+            </h2>
+            <div class="section-divider verse-divider"></div>
+            <p class="verse-text" data-translate="history.verse.text">
+                "Allez, faites de toutes les nations des disciples, les baptisant au nom du Père, 
+                du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que je vous ai prescrit. 
+                Et voici, je suis avec vous tous les jours, jusqu'à la fin du monde."
+            </p>
+            <p class="verse-reference">
+                - <span data-translate="history.verse.reference">Matthieu 28:19-20</span>
+            </p>
+        </div>
     </div>
 
-    <!-- FOOTER (chargé automatiquement) -->
+    <!-- FOOTER -->
     <div id="footer-placeholder"></div>
 
-    <!-- Styles additionnels pour cette page -->
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="../static/js/translator.js"></script>
     <script src="../static/js/main.js"></script> 
+    
+    <script>
+        const historyTranslations = {
+            fr: {
+                "page.title": "Historique - CMCI OBILI",
+                "history.title": "Notre Historique",
+                "history.intro": "L'histoire de la CMCI est marquée par la fidélité à l'appel de Dieu et l'engagement à proclamer l'Évangile dans le monde entier.",
+                "history.founder.title": "Le Père Fondateur",
+                "history.founder.name": "Professeur Zacharias Tanee Fomum",
+                "history.founder.description": "Le Professeur Zacharias Tanee Fomum est le père fondateur de la Communauté Missionnaire Chrétienne Internationale (CMCI). Homme de Dieu, enseignant et visionnaire, il a posé les fondations d'un mouvement qui s'étend aujourd'hui dans plusieurs nations.",
+                "history.founder.ministry": "Le ministère du Professeur Fomum a été caractérisé par un enseignement profond de la Parole de Dieu, une vie de prière intense et un engagement total pour l'évangélisation mondiale. Son œuvre littéraire compte de nombreux ouvrages qui continuent d'édifier les croyants à travers le monde.",
+                "history.schism.title": "Un Tournant Historique - 2006",
+                "history.schism.context": "Après le décès du Professeur Zacharias Tanee Fomum le 14 mars 2009, un schisme s'est produit au sein du ministère. La faction dissidente a déménagé à Bertoua, dans la région de l'Est du Cameroun, où elle a installé son quartier général.",
+                "history.schism.separation": "En 2012, la Communauté Missionnaire Chrétienne Internationale a tenu sa première convention internationale après le schisme. Cette concertation a permis d'affirmer les résolutions et déclarations qui ont été prises à la fin de la convention et de la concertation missionnaire tenue à Yaoundé du 26 au 30 Novembre 2012.",
+                "history.leadership.title": "Leadership International",
+                "history.leadership.president": "Président International",
+                "history.leadership.name": "Frère-Joseph Tanyï Mbofor",
+                "history.leadership.role": "Leader et Coordinateur de la Communauté Missionnaire Chrétienne Internationale et ses Églises Associées.",
+                "history.leadership.description": "Sous la direction du Président International, la CMCI poursuit sa mission d'évangélisation et d'implantation d'églises à travers le monde, fidèle à la vision du fondateur.",
+                "history.expansion.title": "Notre Expansion",
+                "history.expansion.intro": "La CMCI s'est développée progressivement en implantant des églises dans différentes régions du Cameroun et du monde. Nous proclamons l'Évangile et établissons des communautés de croyants fidèles à la Parole de Dieu.",
+                "history.expansion.countries": "Pays où la CMCI est présente :",
+                "history.expansion.cameroon": "Cameroun",
+                "history.expansion.ivory": "Côte d'Ivoire",
+                "history.expansion.gabon": "Gabon",
+                "history.expansion.germany": "Allemagne",
+                "history.expansion.ghana": "Ghana",
+                "history.expansion.india": "Inde",
+                "history.expansion.mozambique": "Mozambique",
+                "history.expansion.growth": "Ces différents pays se sont progressivement représentés dans notre mouvement missionnaire, témoignant de la fidélité de Dieu et de son œuvre à travers notre communauté.",
+                "history.concertation.title": "Concertation de Yaoundé - 2012",
+                "history.concertation.event": "26-30 Novembre 2012 - Yaoundé",
+                "history.concertation.subtitle": "Déclarations et Résolutions",
+                "history.concertation.intro": "Cette concertation historique a rassemblé les Églises Associées de la CMCI pour affirmer notre vision commune et notre engagement envers le Royaume de Dieu et le Seigneur Jésus-Christ.",
+                "history.concertation.declarations": "Principales Déclarations :",
+                "history.concertation.dec1": "Notre Mission et l'Expansion du Royaume de Dieu dans les cœurs des Hommes",
+                "history.concertation.dec2": "Notre Vision : Le Royaume de Dieu",
+                "history.concertation.dec3": "Nous nous réunissons au nom de Jésus-Christ et en Son Nom Seul",
+                "history.concertation.dec4": "L'Assemblée doit être Centrée sur Jésus et sur Son Royaume Uniquement",
+                "history.concertation.dec5": "Nous reconnaissons que toute la Parole de Dieu Est Juste et qu'elle contient des vérités éternelles et encourageantes",
+                "history.concertation.dec6": "Nous confirmons les Organes : Le Frère-Joseph Tanyï Mbofor comme Leader et Coordinateur de la CMCI et Ses Églises Associées",
+                "history.concertation.dec7": "Les Églises locales sont Autonomes et sous la direction du Corps des Anciens",
+                "history.concertation.dec8": "Bien qu'elles soient Autonomes, les Églises locales sont Interdépendantes",
+                "history.governance.title": "Structure et Gouvernance",
+                "history.governance.intro": "La CMCI fonctionne selon une structure d'églises locales autonomes mais interdépendantes, dirigées par le Saint-Esprit à travers les Anciens de chaque église locale.",
+                "history.governance.principles": "Principes de Gouvernance :",
+                "history.governance.p1": "Deux Ailes de la Direction : Un Leadership Local/Résidant appelé Corps des Anciens et Un leadership Non Résidant appelé Équipes Apostoliques",
+                "history.governance.p2": "Conduits par le Saint-Esprit, les Anciens de l'église Locale doivent envoyer des Équipes Apostoliques",
+                "history.governance.p3": "Les Équipes Apostoliques doivent rendre compte aux églises qui les ont envoyées",
+                "history.governance.p4": "La relation des Anciens doit être basée dans la différence d'âges et d'expérience du ministère chrétien",
+                "history.governance.p5": "Le Seigneur Jésus et Son Royaume sont notre seule Bannière. Nous ne créons pas d'autre Bannière en Son sein ni en non",
+                "history.verse.title": "Parole de Dieu",
+                "history.verse.text": "\"Allez, faites de toutes les nations des disciples, les baptisant au nom du Père, du Fils et du Saint-Esprit, et enseignez-leur à observer tout ce que je vous ai prescrit. Et voici, je suis avec vous tous les jours, jusqu'à la fin du monde.\"",
+                "history.verse.reference": "Matthieu 28:19-20"
+            },
+            en: {
+                "page.title": "History - CMCI OBILI",
+                "history.title": "Our History",
+                "history.intro": "The history of CMFI is marked by faithfulness to God's call and commitment to proclaim the Gospel throughout the world.",
+                "history.founder.title": "The Founding Father",
+                "history.founder.name": "Professor Zacharias Tanee Fomum",
+                "history.founder.description": "Professor Zacharias Tanee Fomum is the founding father of the International Christian Missionary Community (ICCM). A man of God, teacher and visionary, he laid the foundations of a movement that now extends across several nations.",
+                "history.founder.ministry": "Professor Fomum's ministry was characterized by deep teaching of God's Word, an intense prayer life, and total commitment to worldwide evangelization. His literary work includes numerous writings that continue to edify believers around the world.",
+                "history.schism.title": "A Historic Turning Point - 2006",
+                "history.schism.context": "After the death of Professor Zacharias Tanee Fomum on March 14, 2009, a schism occurred within the ministry. The dissident faction moved to Bertoua, in the Eastern region of Cameroon, where they established their headquarters.",
+                "history.schism.separation": "In 2012, the International Christian Missionary Community held its first international convention after the schism. This gathering allowed us to affirm the resolutions and declarations that were made at the end of the convention and missionary consultation held in Yaoundé from November 26-30, 2012.",
+                "history.leadership.title": "International Leadership",
+                "history.leadership.president": "International President",
+                "history.leadership.name": "Brother-Joseph Tanyï Mbofor",
+                "history.leadership.role": "Leader and Coordinator of the International Christian Missionary Community and its Associated Churches.",
+                "history.leadership.description": "Under the direction of the International President, CMFI continues its mission of evangelization and church planting around the world, faithful to the founder's vision.",
+                "history.expansion.title": "Our Expansion",
+                "history.expansion.intro": "CMFI has gradually developed by planting churches in different regions of Cameroon and the world. We proclaim the Gospel and establish communities of believers faithful to God's Word.",
+                "history.expansion.countries": "Countries where CMFI is present:",
+                "history.expansion.cameroon": "Cameroon",
+                "history.expansion.ivory": "Ivory Coast",
+                "history.expansion.gabon": "Gabon",
+                "history.expansion.germany": "Germany",
+                "history.expansion.ghana": "Ghana",
+                "history.expansion.india": "India",
+                "history.expansion.mozambique": "Mozambique",
+                "history.expansion.growth": "These different countries have been progressively represented in our missionary movement, testifying to God's faithfulness and His work through our community.",
+                "history.concertation.title": "Yaoundé Consultation - 2012",
+                "history.concertation.event": "November 26-30, 2012 - Yaoundé",
+                "history.concertation.subtitle": "Declarations and Resolutions",
+                "history.concertation.intro": "This historic consultation brought together the Associated Churches of CMFI to affirm our common vision and commitment to the Kingdom of God and the Lord Jesus Christ.",
+                "history.concertation.declarations": "Main Declarations:",
+                "history.concertation.dec1": "Our Mission and the Expansion of God's Kingdom in the hearts of Men",
+                "history.concertation.dec2": "Our Vision: The Kingdom of God",
+                "history.concertation.dec3": "We gather in the name of Jesus Christ and in His Name Alone",
+                "history.concertation.dec4": "The Assembly must be Centered on Jesus and His Kingdom Only",
+                "history.concertation.dec5": "We recognize that all of God's Word Is True and contains eternal and encouraging truths",
+                "history.concertation.dec6": "We confirm the Bodies: Brother-Joseph Tanyï Mbofor as Leader and Coordinator of CMFI and Its Associated Churches",
+                "history.concertation.dec7": "Local Churches are Autonomous and under the direction of the Body of Elders",
+                "history.concertation.dec8": "Although Autonomous, local Churches are Interdependent",
+                "history.governance.title": "Structure and Governance",
+                "history.governance.intro": "CMFI operates according to a structure of autonomous but interdependent local churches, led by the Holy Spirit through the Elders of each local church.",
+                "history.governance.principles": "Governance Principles:",
+                "history.governance.p1": "Two Wings of Direction: A Local/Resident Leadership called Body of Elders and A Non-Resident leadership called Apostolic Teams",
+                "history.governance.p2": "Led by the Holy Spirit, the Elders of the Local church must send Apostolic Teams",
+                "history.governance.p3": "Apostolic Teams must be accountable to the churches that sent them",
+                "history.governance.p4": "The relationship of Elders must be based on difference in age and experience in Christian ministry",
+                "history.governance.p5": "The Lord Jesus and His Kingdom are our only Banner. We do not create another Banner within or outside Him",
+                "history.verse.title": "Word of God",
+                "history.verse.text": "\"Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the end of the age.\"",
+                "history.verse.reference": "Matthew 28:19-20"
+            }
+        };
+        
+        if (window.translator) {
+            window.translator.registerPageTranslations(historyTranslations);
+        }
+    </script>
 </body>
 </html>

@@ -3,30 +3,535 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="page.title">Qui Sommes-Nous - CMCI OBILI</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <title>Qui Sommes-Nous - CMCI OBILI</title>
     <link rel="stylesheet" href="../static/css/style.css">
-    <script src="https://kit.fontawesome.com/a2e0e9f6e6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- HEADER (chargé automatiquement) -->
+    <!-- HEADER -->
     <div id="header-placeholder"></div>
+
+    <!-- Bouton Menu -->
     <button class="menu-toggle" id="menuToggle"></button>
+
+    <!-- Overlay -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- SIDEBAR -->
     <div id="sidebar-placeholder"></div>
 
-    <div id="contentArea">
-        <h1>Qui Sommes-Nous</h1>
-        <p style="text-align:center;">Contenu à venir...</p>
+    <!-- CONTENU PRINCIPAL -->
+    <div class="content-area" id="contentArea">
+        <div class="welcome-text">
+            <h1>
+                <span class="accent-dot"></span>
+                <span data-translate="about.title">Qui Sommes-Nous</span>
+                <span class="accent-dot"></span>
+            </h1>
+            <p data-translate="about.intro">
+                Nous sommes la Communauté Missionnaire Chrétienne Internationale (CMCI), 
+                une famille de croyants passionnés par Dieu et Son Royaume.
+            </p>
+        </div>
+
+        <!-- Image d'en-tête -->
+        <div class="text-center mb-4">
+            <img src="static/images/about/about-header.jpg" alt="Qui Sommes-Nous" class="img-fluid rounded" style="max-height: 400px; object-fit: cover; width: 100%;">
+        </div>
+
+        <!-- Notre Identité -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.identity.title">Notre Identité</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <p data-translate="about.identity.text1">
+                        La CMCI est une communauté de croyants dédiée à la proclamation de 
+                        l'Évangile du Royaume de Dieu. Nous sommes centrés sur Jésus-Christ 
+                        et guidés par le Saint-Esprit dans tout ce que nous faisons.
+                    </p>
+                    <p data-translate="about.identity.text2">
+                        Notre nom - Communauté Missionnaire Chrétienne Internationale - 
+                        reflète notre engagement à servir Christ localement et à travers le 
+                        monde entier.
+                    </p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <img src="static/images/about/identity.jpg" alt="Notre Identité" class="img-fluid rounded" style="max-height: 300px;">
+                </div>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="about.identity.meaning">
+                Signification de notre nom :
+            </h4>
+            <ul style="color: #555; line-height: 2;">
+                <li data-translate="about.identity.meaning1">
+                    <strong>Communauté</strong> : Nous sommes un corps uni en Christ
+                </li>
+                <li data-translate="about.identity.meaning2">
+                    <strong>Missionnaire</strong> : Notre cœur est tourné vers l'évangélisation
+                </li>
+                <li data-translate="about.identity.meaning3">
+                    <strong>Chrétienne</strong> : Nous appartenons à Christ et suivons Ses enseignements
+                </li>
+                <li data-translate="about.identity.meaning4">
+                    <strong>Internationale</strong> : Notre vision dépasse les frontières nationales
+                </li>
+            </ul>
+        </div>
+
+        <!-- Ce Qui Nous Définit -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.defines.title">Ce Qui Nous Définit</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="text-center mb-4">
+                <img src="static/images/about/defines-us.jpg" alt="Ce qui nous définit" class="img-fluid rounded" style="max-height: 350px;">
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-cross"></i>
+                            <span data-translate="about.defines.christ">Centrés sur Christ</span>
+                        </h5>
+                        <p data-translate="about.defines.christ.desc">
+                            Jésus-Christ est le centre de tout ce que nous sommes et faisons
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-book-open"></i>
+                            <span data-translate="about.defines.word">Fondés sur la Parole</span>
+                        </h5>
+                        <p data-translate="about.defines.word.desc">
+                            La Bible est notre autorité suprême et notre guide
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-dove"></i>
+                            <span data-translate="about.defines.spirit">Guidés par l'Esprit</span>
+                        </h5>
+                        <p data-translate="about.defines.spirit.desc">
+                            Le Saint-Esprit dirige nos pas et notre ministère
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="worship-schedule-card">
+                        <h5>
+                            <i class="fas fa-globe-africa"></i>
+                            <span data-translate="about.defines.mission">Engagés dans la Mission</span>
+                        </h5>
+                        <p data-translate="about.defines.mission.desc">
+                            Proclamer l'Évangile jusqu'aux extrémités de la terre
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notre Communauté -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.community.title">Notre Communauté</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-4 text-center mb-3">
+                    <img src="static/images/about/community.jpg" alt="Notre Communauté" class="img-fluid rounded" style="max-height: 250px;">
+                </div>
+                <div class="col-md-8">
+                    <p data-translate="about.community.text1">
+                        À la CMCI, nous sommes une famille diversifiée unie par notre amour 
+                        pour Christ. Nous croyons en l'importance de la communion fraternelle 
+                        et du soutien mutuel.
+                    </p>
+                    <p data-translate="about.community.text2">
+                        Chaque membre de notre communauté est précieux et a un rôle unique 
+                        à jouer dans le corps de Christ. Nous nous encourageons mutuellement 
+                        à grandir dans la foi et à servir fidèlement.
+                    </p>
+                </div>
+            </div>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="about.community.aspects">
+                Aspects de notre communauté :
+            </h4>
+            <ul style="color: #555; line-height: 2;">
+                <li data-translate="about.community.point1">
+                    <strong>Communion fraternelle</strong> : Partage et soutien mutuel
+                </li>
+                <li data-translate="about.community.point2">
+                    <strong>Culte ensemble</strong> : Adoration collective de notre Dieu
+                </li>
+                <li data-translate="about.community.point3">
+                    <strong>Enseignement biblique</strong> : Formation et croissance spirituelle
+                </li>
+                <li data-translate="about.community.point4">
+                    <strong>Service communautaire</strong> : Impact dans notre société
+                </li>
+            </ul>
+        </div>
+
+        <!-- Structure et Organisation -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.structure.title">Structure et Organisation</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="text-center mb-4">
+                <img src="static/images/about/structure.jpg" alt="Structure" class="img-fluid rounded" style="max-height: 300px;">
+            </div>
+
+            <p data-translate="about.structure.intro">
+                La CMCI est organisée en églises locales autonomes mais interdépendantes, 
+                toutes unies sous la bannière du Seigneur Jésus-Christ.
+            </p>
+
+            <h4 style="color: var(--primary-color); margin-top: 30px;" data-translate="about.structure.levels">
+                Niveaux d'organisation :
+            </h4>
+            
+            <div class="row mt-3">
+                <div class="col-md-4 mb-3">
+                    <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                        <h5 style="color: var(--primary-color);">
+                            <i class="fas fa-church"></i>
+                            <span data-translate="about.structure.local">Église Locale</span>
+                        </h5>
+                        <p data-translate="about.structure.local.desc">
+                            Autonome et dirigée par les Anciens locaux
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                        <h5 style="color: var(--primary-color);">
+                            <i class="fas fa-flag"></i>
+                            <span data-translate="about.structure.national">Niveau National</span>
+                        </h5>
+                        <p data-translate="about.structure.national.desc">
+                            Coordination des églises au niveau du pays
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="alert" style="background-color: #f8f9fa; border-left: 4px solid var(--primary-color); padding: 20px;">
+                        <h5 style="color: var(--primary-color);">
+                            <i class="fas fa-globe"></i>
+                            <span data-translate="about.structure.international">Niveau International</span>
+                        </h5>
+                        <p data-translate="about.structure.international.desc">
+                            Réseau mondial d'églises associées
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nos Activités -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.activities.title">Nos Activités</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row align-items-center mb-4">
+                <div class="col-md-8">
+                    <h4 style="color: var(--primary-color);" data-translate="about.activities.subtitle">
+                        Ce que nous faisons :
+                    </h4>
+                    <ul style="color: #555; line-height: 2; margin-top: 20px;">
+                        <li data-translate="about.activities.point1">
+                            <strong>Cultes réguliers</strong> : Dimanche et en semaine
+                        </li>
+                        <li data-translate="about.activities.point2">
+                            <strong>Études bibliques</strong> : Approfondissement de la Parole
+                        </li>
+                        <li data-translate="about.activities.point3">
+                            <strong>Prière et jeûne</strong> : Recherche de la face de Dieu
+                        </li>
+                        <li data-translate="about.activities.point4">
+                            <strong>Évangélisation</strong> : Témoignage et partage de l'Évangile
+                        </li>
+                        <li data-translate="about.activities.point5">
+                            <strong>Formation de disciples</strong> : Équipement des croyants
+                        </li>
+                        <li data-translate="about.activities.point6">
+                            <strong>Missions</strong> : Envoi de missionnaires dans le monde
+                        </li>
+                        <li data-translate="about.activities.point7">
+                            <strong>Action sociale</strong> : Service à la communauté
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                    <img src="static/images/about/activities.jpg" alt="Nos Activités" class="img-fluid rounded" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Rejoignez-Nous -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.join.title">Rejoignez Notre Communauté</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="text-center mb-4">
+                <img src="static/images/about/join-us.jpg" alt="Rejoignez-nous" class="img-fluid rounded" style="max-height: 350px;">
+            </div>
+
+            <p data-translate="about.join.text1">
+                Vous êtes le bienvenu dans notre communauté ! Que vous soyez un nouveau 
+                croyant ou un chrétien mature, il y a une place pour vous à la CMCI.
+            </p>
+
+            <p data-translate="about.join.text2">
+                Nous vous invitons à venir découvrir la joie de servir Dieu ensemble, 
+                de grandir dans la connaissance de Sa Parole, et de participer à Son 
+                œuvre glorieuse dans le monde.
+            </p>
+
+            <div class="text-center mt-4">
+                <a href="contact.html" class="btn-contact">
+                    <i class="fas fa-envelope"></i>
+                    <span data-translate="about.join.button">Contactez-nous</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Nos Valeurs Clés -->
+        <div class="content-card">
+            <h2>
+                <span class="accent-dot"></span>
+                <span data-translate="about.values.title">Nos Valeurs Clés</span>
+                <span class="accent-dot"></span>
+            </h2>
+            <div class="section-divider"></div>
+            
+            <div class="row mt-4">
+                <div class="col-md-3 mb-3">
+                    <div class="text-center">
+                        <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-heart" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h5 style="color: var(--primary-color);" data-translate="about.values.love">Amour</h5>
+                        <p data-translate="about.values.love.desc">Pour Dieu et notre prochain</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="text-center">
+                        <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-check-circle" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h5 style="color: var(--primary-color);" data-translate="about.values.integrity">Intégrité</h5>
+                        <p data-translate="about.values.integrity.desc">Honnêteté et transparence</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="text-center">
+                        <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-star" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h5 style="color: var(--primary-color);" data-translate="about.values.excellence">Excellence</h5>
+                        <p data-translate="about.values.excellence.desc">Dans tout ce que nous faisons</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="text-center">
+                        <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px;">
+                            <i class="fas fa-users" style="font-size: 35px; color: white;"></i>
+                        </div>
+                        <h5 style="color: var(--primary-color);" data-translate="about.values.unity">Unité</h5>
+                        <p data-translate="about.values.unity.desc">Un corps en Christ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Verset -->
+        <div class="content-card verse-card">
+            <h2>
+                <i class="fas fa-bible"></i>
+                <span data-translate="about.verse.title">Notre Fondement</span>
+            </h2>
+            <div class="section-divider verse-divider"></div>
+            <p class="verse-text" data-translate="about.verse.text">
+                "Car personne ne peut poser un autre fondement que celui qui a été posé, 
+                savoir Jésus-Christ."
+            </p>
+            <p class="verse-reference">
+                - <span data-translate="about.verse.reference">1 Corinthiens 3:11</span>
+            </p>
+        </div>
     </div>
 
-    <!-- FOOTER (chargé automatiquement) -->
+    <!-- FOOTER -->
     <div id="footer-placeholder"></div>
 
-    <!-- Styles additionnels pour cette page -->
+        <!-- Styles additionnels pour cette page -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="../static/js/translator.js"></script>
     <script src="../static/js/main.js"></script> 
+
+    <script>
+        const aboutTranslations = {
+            fr: {
+                "page.title": "Qui Sommes-Nous - CMCI OBILI",
+                "about.title": "Qui Sommes-Nous",
+                "about.intro": "Nous sommes la Communauté Missionnaire Chrétienne Internationale (CMCI), une famille de croyants passionnés par Dieu et Son Royaume.",
+                "about.identity.title": "Notre Identité",
+                "about.identity.text1": "La CMCI est une communauté de croyants dédiée à la proclamation de l'Évangile du Royaume de Dieu. Nous sommes centrés sur Jésus-Christ et guidés par le Saint-Esprit dans tout ce que nous faisons.",
+                "about.identity.text2": "Notre nom - Communauté Missionnaire Chrétienne Internationale - reflète notre engagement à servir Christ localement et à travers le monde entier.",
+                "about.identity.meaning": "Signification de notre nom :",
+                "about.identity.meaning1": "Communauté : Nous sommes un corps uni en Christ",
+                "about.identity.meaning2": "Missionnaire : Notre cœur est tourné vers l'évangélisation",
+                "about.identity.meaning3": "Chrétienne : Nous appartenons à Christ et suivons Ses enseignements",
+                "about.identity.meaning4": "Internationale : Notre vision dépasse les frontières nationales",
+                "about.defines.title": "Ce Qui Nous Définit",
+                "about.defines.christ": "Centrés sur Christ",
+                "about.defines.christ.desc": "Jésus-Christ est le centre de tout ce que nous sommes et faisons",
+                "about.defines.word": "Fondés sur la Parole",
+                "about.defines.word.desc": "La Bible est notre autorité suprême et notre guide",
+                "about.defines.spirit": "Guidés par l'Esprit",
+                "about.defines.spirit.desc": "Le Saint-Esprit dirige nos pas et notre ministère",
+                "about.defines.mission": "Engagés dans la Mission",
+                "about.defines.mission.desc": "Proclamer l'Évangile jusqu'aux extrémités de la terre",
+                "about.community.title": "Notre Communauté",
+                "about.community.text1": "À la CMCI, nous sommes une famille diversifiée unie par notre amour pour Christ. Nous croyons en l'importance de la communion fraternelle et du soutien mutuel.",
+                "about.community.text2": "Chaque membre de notre communauté est précieux et a un rôle unique à jouer dans le corps de Christ. Nous nous encourageons mutuellement à grandir dans la foi et à servir fidèlement.",
+                "about.community.aspects": "Aspects de notre communauté :",
+                "about.community.point1": "Communion fraternelle : Partage et soutien mutuel",
+                "about.community.point2": "Culte ensemble : Adoration collective de notre Dieu",
+                "about.community.point3": "Enseignement biblique : Formation et croissance spirituelle",
+                "about.community.point4": "Service communautaire : Impact dans notre société",
+                "about.structure.title": "Structure et Organisation",
+                "about.structure.intro": "La CMCI est organisée en églises locales autonomes mais interdépendantes, toutes unies sous la bannière du Seigneur Jésus-Christ.",
+                "about.structure.levels": "Niveaux d'organisation :",
+                "about.structure.local": "Église Locale",
+                "about.structure.local.desc": "Autonome et dirigée par les Anciens locaux",
+                "about.structure.national": "Niveau National",
+                "about.structure.national.desc": "Coordination des églises au niveau du pays",
+                "about.structure.international": "Niveau International",
+                "about.structure.international.desc": "Réseau mondial d'églises associées",
+                "about.activities.point4": "Evangelization: Testimony and sharing the Gospel",
+                "about.activities.point5": "Disciple training: Equipping believers",
+                "about.activities.point6": "Missions: Sending missionaries into the world",
+                "about.activities.point7": "Social action: Service to the community",
+                "about.join.title": "Join Our Community",
+                "about.join.text1": "You are welcome in our community! Whether you are a new believer or a mature Christian, there is a place for you at ICCM.",
+                "about.join.text2": "We invite you to come discover the joy of serving God together, growing in knowledge of His Word, and participating in His glorious work in the world.",
+                "about.join.button": "Contact Us",
+                "about.values.title": "Our Core Values",
+                "about.values.love": "Love",
+                "about.values.love.desc": "For God and our neighbor",
+                "about.values.integrity": "Integrity",
+                "about.values.integrity.desc": "Honesty and transparency",
+                "about.values.excellence": "Excellence",
+                "about.values.excellence.desc": "In everything we do",
+                "about.values.unity": "Unity",
+                "about.values.unity.desc": "One body in Christ",
+                "about.verse.title": "Our Foundation",
+                "about.verse.text": "\"For no one can lay any foundation other than the one already laid, which is Jesus Christ.\"",
+                "about.verse.reference": "1 Corinthians 3:11"
+            },
+            en: {
+                "page.title": "About Us - CMFI OBILI",
+                "about.title": "About Us",
+                "about.intro": "We are the International Christian Missionary Community (CMFI), a family of believers passionate about God and His Kingdom.",
+                "about.identity.title": "Our Identity",
+                "about.identity.text1": "CMFI is a community of believers dedicated to proclaiming the Gospel of God's Kingdom. We are centered on Jesus Christ and guided by the Holy Spirit in everything we do.",
+                "about.identity.text2": "Our name - International Christian Missionary Community - reflects our commitment to serve Christ locally and throughout the world.",
+                "about.identity.meaning": "Meaning of our name:",
+                "about.identity.meaning1": "Community: We are one body united in Christ",
+                "about.identity.meaning2": "Missionary: Our heart is turned toward evangelization",
+                "about.identity.meaning3": "Christian: We belong to Christ and follow His teachings",
+                "about.identity.meaning4": "International: Our vision transcends national borders",
+                "about.defines.title": "What Defines Us",
+                "about.defines.christ": "Christ-Centered",
+                "about.defines.christ.desc": "Jesus Christ is the center of all we are and do",
+                "about.defines.word": "Word-Founded",
+                "about.defines.word.desc": "The Bible is our supreme authority and guide",
+                "about.defines.spirit": "Spirit-Led",
+                "about.defines.spirit.desc": "The Holy Spirit directs our steps and ministry",
+                "about.defines.mission": "Mission-Engaged",
+                "about.defines.mission.desc": "Proclaiming the Gospel to the ends of the earth",
+                "about.community.title": "Our Community",
+                "about.community.text1": "At CMFI, we are a diverse family united by our love for Christ. We believe in the importance of fellowship and mutual support.",
+                "about.community.text2": "Each member of our community is precious and has a unique role to play in the body of Christ. We encourage one another to grow in faith and serve faithfully.",
+                "about.community.aspects": "Aspects of our community:",
+                "about.community.point1": "Fellowship: Sharing and mutual support",
+                "about.community.point2": "Worship together: Collective worship of our God",
+                "about.community.point3": "Biblical teaching: Training and spiritual growth",
+                "about.community.point4": "Community service: Impact in our society",
+                "about.structure.title": "Structure and Organization",
+                "about.structure.intro": "CMFI is organized into autonomous but interdependent local churches, all united under the banner of the Lord Jesus Christ.",
+                "about.structure.levels": "Organizational levels:",
+                "about.structure.local": "Local Church",
+                "about.structure.local.desc": "Autonomous and led by local Elders", 
+                "about.structure.national": "National Level",
+                "about.structure.national.desc": "Coordination of churches at country level",
+                "about.structure.international": "International Level",
+                "about.structure.international.desc": "Global network of associated churches",
+                "about.activities.title": "Our Activities",
+                "about.activities.subtitle": "What we do:",
+                "about.activities.point1": "Regular services: Sunday and weekday",
+                "about.activities.point2": "Bible studies: Deepening the Word",
+                "about.activities.point3": "Prayer and fasting: Seeking God's face",
+                "about.activities.point4": "Evangelization: Testimony and sharing the Gospel",
+                "about.activities.point5": "Disciple training: Equipping believers",
+                "about.activities.point6": "Missions: Sending missionaries into the world",
+                "about.activities.point7": "Social action: Service to the community",
+                "about.join.title": "Join Our Community",
+                "about.join.text1": "You are welcome in our community! Whether you are a new believer or a mature Christian, there is a place for you at CMFI.",
+                "about.join.text2": "We invite you to come discover the joy of serving God together, growing in knowledge of His Word, and participating in His glorious work in the world.",
+                "about.join.button": "Contact Us",
+                "about.values.title": "Our Core Values",
+                "about.values.love": "Love",
+                "about.values.love.desc": "For God and our neighbor",
+                "about.values.integrity": "Integrity",
+                "about.values.integrity.desc": "Honesty and transparency",
+                "about.values.excellence": "Excellence",
+                "about.values.excellence.desc": "In everything we do",
+                "about.values.unity": "Unity",
+                "about.values.unity.desc": "One body in Christ",
+                "about.verse.title": "Our Foundation",
+                "about.verse.text": "\"For no one can lay any foundation other than the one already laid, which is Jesus Christ.\"",
+                "about.verse.reference": "1 Corinthians 3:11"
+            }
+        };
+        
+        if (window.translator) {
+            window.translator.registerPageTranslations(aboutTranslations);
+        }
+    </script>
 </body>
 </html>

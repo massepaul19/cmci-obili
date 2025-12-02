@@ -1,4 +1,5 @@
 // translator.js - Système de traduction CMCI OBILI (Français/Anglais)
+// Version améliorée avec toutes les traductions du site
 
 class TranslationManager {
     constructor() {
@@ -12,23 +13,29 @@ class TranslationManager {
             en: 'Translating...'
         };
 
-        // Traductions communes (navigation, footer, header)
+        // Traductions communes (navigation, footer, header, etc.)
         this.commonTranslations = {
             fr: {
-                // Header
+                // ========== HEADER ==========
                 'header.title': 'CMCI OBILI',
-                'header.slogan': 'Une Église, Une Famille, Une Mission',
+                'header.slogan': 'Communauté Missionnaire Chrétienne Internationale Obili',
+                'header.language.fr': 'Français',
+                'header.language.en': 'English',
                 
-                // Navigation
+                // ========== NAVIGATION (Sidebar) ==========
+                'nav.home': 'Accueil',
+                'nav.themes': 'Thèmes',
                 'nav.organisation': 'Organisation',
                 'nav.departements': 'Départements',
                 'nav.evangelisation': 'Évangélisation',
                 'nav.messages': 'Messages',
                 'nav.evenements': 'Événements',
                 'nav.contact': 'Contactez-nous',
+                'nav.follow': 'Suivez-nous',
                 
                 // Sous-menu Organisation
-                'submenu.historique': 'Historique',
+                'submenu.historique': 'Notre Historique',
+                'submenu.croyance': 'Nos Croyances',
                 'submenu.qui-sommes-nous': 'Qui sommes-nous',
                 'submenu.vision': 'Notre Vision',
                 'submenu.mission': 'Notre Mission',
@@ -57,7 +64,7 @@ class TranslationManager {
                 'submenu.passes': 'Événements passés',
                 'submenu.speciaux': 'Programmes spéciaux',
                 
-                // Footer
+                // ========== FOOTER ==========
                 'footer.about.title': 'CMCI OBILI',
                 'footer.about.text': 'Une communauté de foi dédiée à l\'adoration, à la croissance spirituelle et au service de Dieu et de notre prochain.',
                 'footer.links.title': 'Liens Rapides',
@@ -68,26 +75,54 @@ class TranslationManager {
                 'footer.links.contact': 'Contact',
                 'footer.contact.title': 'Contactez-nous',
                 'footer.contact.address': 'Obili, Yaoundé, Cameroun',
-                'footer.contact.schedule': 'Cultes: Dimanche 9h - 12h',
+                'footer.contact.phone': '+237 677 29 32 34',
+                'footer.contact.email': 'cmciobili@gmail.com',
+                'footer.contact.schedule': 'Cultes: Dimanche 8h - 12h',
                 'footer.copyright': 'Tous droits réservés.',
-                'footer.developed': 'Développé avec',
-                'footer.developed.end': 'pour la gloire de Dieu'
+                'footer.verse': '« Il y a diversité de dons, mais le même Esprit ; diversité de services, mais le même Seigneur. Ensemble, nous formons un seul corps pour la gloire de Dieu. »',
+                'footer.verse.ref': '1 Corinthiens 12:4-5',
+                'footer.glory': 'Toute la gloire à Dieu.',
+                
+                // ========== BOUTONS COMMUNS ==========
+                'btn.learn-more': 'En savoir plus',
+                'btn.contact': 'Contactez-nous',
+                'btn.read-more': 'Lire la suite',
+                'btn.back': 'Retour',
+                'btn.next': 'Suivant',
+                'btn.previous': 'Précédent',
+                'btn.download': 'Télécharger',
+                'btn.share': 'Partager',
+                'btn.register': 'S\'inscrire',
+                
+                // ========== MESSAGES GÉNÉRAUX ==========
+                'msg.welcome': 'Bienvenue',
+                'msg.loading': 'Chargement...',
+                'msg.error': 'Une erreur s\'est produite',
+                'msg.success': 'Succès',
+                'msg.no-content': 'Aucun contenu disponible',
+                'msg.coming-soon': 'Bientôt disponible'
             },
             en: {
-                // Header
-                'header.title': 'CMCI OBILI',
-                'header.slogan': 'One Church, One Family, One Mission',
+                // ========== HEADER ==========
+                'header.title': 'CMFI OBILI',
+                'header.slogan': 'International Christian Missionary Community Obili',
+                'header.language.fr': 'French',
+                'header.language.en': 'English',
                 
-                // Navigation
+                // ========== NAVIGATION (Sidebar) ==========
+                'nav.home': 'Home',
+                'nav.themes': 'Themes',
                 'nav.organisation': 'Organization',
                 'nav.departements': 'Departments',
                 'nav.evangelisation': 'Evangelization',
                 'nav.messages': 'Messages',
                 'nav.evenements': 'Events',
                 'nav.contact': 'Contact Us',
+                'nav.follow': 'Follow Us',
                 
                 // Sous-menu Organisation
-                'submenu.historique': 'History',
+                'submenu.historique': 'Our History',
+                'submenu.croyance': 'Our Beliefs',
                 'submenu.qui-sommes-nous': 'About Us',
                 'submenu.vision': 'Our Vision',
                 'submenu.mission': 'Our Mission',
@@ -116,8 +151,8 @@ class TranslationManager {
                 'submenu.passes': 'Past Events',
                 'submenu.speciaux': 'Special Programs',
                 
-                // Footer
-                'footer.about.title': 'CMCI OBILI',
+                // ========== FOOTER ==========
+                'footer.about.title': 'CMFI OBILI',
                 'footer.about.text': 'A faith community dedicated to worship, spiritual growth, and serving God and our neighbors.',
                 'footer.links.title': 'Quick Links',
                 'footer.links.home': 'Home',
@@ -127,17 +162,41 @@ class TranslationManager {
                 'footer.links.contact': 'Contact',
                 'footer.contact.title': 'Contact Us',
                 'footer.contact.address': 'Obili, Yaoundé, Cameroon',
-                'footer.contact.schedule': 'Services: Sunday 9am - 12pm',
+                'footer.contact.phone': '+237 677 29 32 34',
+                'footer.contact.email': 'cmciobili@gmail.com',
+                'footer.contact.schedule': 'Services: Sunday 8am - 12pm',
                 'footer.copyright': 'All rights reserved.',
-                'footer.developed': 'Developed with',
-                'footer.developed.end': 'for the glory of God'
+                'footer.verse': '"There are different kinds of gifts, but the same Spirit; there are different kinds of service, but the same Lord. Together, we form one body for the glory of God."',
+                'footer.verse.ref': '1 Corinthians 12:4-5',
+                'footer.glory': 'All glory to God.',
+                
+                // ========== BOUTONS COMMUNS ==========
+                'btn.learn-more': 'Learn More',
+                'btn.contact': 'Contact Us',
+                'btn.read-more': 'Read More',
+                'btn.back': 'Back',
+                'btn.next': 'Next',
+                'btn.previous': 'Previous',
+                'btn.download': 'Download',
+                'btn.share': 'Share',
+                'btn.register': 'Register',
+                
+                // ========== MESSAGES GÉNÉRAUX ==========
+                'msg.welcome': 'Welcome',
+                'msg.loading': 'Loading...',
+                'msg.error': 'An error occurred',
+                'msg.success': 'Success',
+                'msg.no-content': 'No content available',
+                'msg.coming-soon': 'Coming soon'
             }
         };
         
         this.init();
     }
 
-    // Initialisation
+    // ========================================
+    // INITIALISATION
+    // ========================================
     init() {
         this.createNotificationElement();
         this.setupLanguageButtons();
@@ -146,7 +205,9 @@ class TranslationManager {
         console.log(`🌐 Translation system initialized! Current language: ${this.currentLang}`);
     }
 
-    // Créer l'élément de notification
+    // ========================================
+    // NOTIFICATION
+    // ========================================
     createNotificationElement() {
         if (!document.getElementById('translationNotification')) {
             const notification = document.createElement('div');
@@ -164,7 +225,7 @@ class TranslationManager {
                     position: fixed;
                     top: 20px;
                     right: 20px;
-                    background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+                    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
                     color: white;
                     padding: 15px 25px;
                     border-radius: 50px;
@@ -177,6 +238,7 @@ class TranslationManager {
                     transform: translateY(-20px);
                     transition: all 0.3s ease;
                     z-index: 10000;
+                    font-weight: 600;
                 }
                 
                 .translation-notification.show {
@@ -187,6 +249,12 @@ class TranslationManager {
                 
                 .translation-notification i {
                     font-size: 20px;
+                    animation: pulse 1.5s infinite;
+                }
+                
+                @keyframes pulse {
+                    0%, 100% { transform: scale(1); }
+                    50% { transform: scale(1.1); }
                 }
                 
                 .translating {
@@ -199,58 +267,6 @@ class TranslationManager {
         }
     }
 
-    // Configuration des boutons de langue
-    setupLanguageButtons() {
-        const langButtons = document.querySelectorAll('.btn-language');
-        langButtons.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                const onclickAttr = btn.getAttribute('onclick');
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/changeLanguage\('(\w+)'\)/);
-                    if (match) {
-                        this.switchLanguage(match[1]);
-                    }
-                }
-            });
-        });
-    }
-
-    // Mise à jour des boutons
-    updateLanguageButtons() {
-        const langButtons = document.querySelectorAll('.btn-language');
-        langButtons.forEach(btn => {
-            const onclickAttr = btn.getAttribute('onclick');
-            if (onclickAttr) {
-                const match = onclickAttr.match(/changeLanguage\('(\w+)'\)/);
-                if (match && match[1] === this.currentLang) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            }
-        });
-    }
-
-    // Obtenir la langue stockée
-    getStoredLanguage() {
-        try {
-            return sessionStorage.getItem('cmci_language') || 'fr';
-        } catch (error) {
-            return 'fr';
-        }
-    }
-
-    // Stocker la langue
-    storeLanguage(lang) {
-        try {
-            sessionStorage.setItem('cmci_language', lang);
-        } catch (error) {
-            console.warn('Unable to store language');
-        }
-    }
-
-    // Afficher la notification
     showNotification(lang) {
         const notification = document.getElementById('translationNotification');
         const notificationText = document.getElementById('notificationText');
@@ -269,14 +285,68 @@ class TranslationManager {
         }, 2000);
     }
 
-    // Simuler un délai
+    // ========================================
+    // GESTION DES BOUTONS DE LANGUE
+    // ========================================
+    setupLanguageButtons() {
+        const langButtons = document.querySelectorAll('.btn-language');
+        langButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const onclickAttr = btn.getAttribute('onclick');
+                if (onclickAttr) {
+                    const match = onclickAttr.match(/changeLanguage\('(\w+)'\)/);
+                    if (match) {
+                        this.switchLanguage(match[1]);
+                    }
+                }
+            });
+        });
+    }
+
+    updateLanguageButtons() {
+        const langButtons = document.querySelectorAll('.btn-language');
+        langButtons.forEach(btn => {
+            const onclickAttr = btn.getAttribute('onclick');
+            if (onclickAttr) {
+                const match = onclickAttr.match(/changeLanguage\('(\w+)'\)/);
+                if (match && match[1] === this.currentLang) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            }
+        });
+    }
+
+    // ========================================
+    // STOCKAGE DE LA LANGUE
+    // ========================================
+    getStoredLanguage() {
+        try {
+            return sessionStorage.getItem('cmci_language') || 'fr';
+        } catch (error) {
+            return 'fr';
+        }
+    }
+
+    storeLanguage(lang) {
+        try {
+            sessionStorage.setItem('cmci_language', lang);
+        } catch (error) {
+            console.warn('Unable to store language');
+        }
+    }
+
+    // ========================================
+    // TRADUCTION
+    // ========================================
     simulateTranslationAPI(lang) {
         return new Promise(resolve => {
             setTimeout(() => resolve(), 300);
         });
     }
 
-    // Traduire les éléments communs
     translateCommonElements(lang = this.currentLang) {
         const elements = document.querySelectorAll('[data-translate]');
         elements.forEach(element => {
@@ -288,18 +358,17 @@ class TranslationManager {
         });
     }
 
-    // Traduire avec traductions de page
     translateWithPageTranslations(pageTranslations, lang = this.currentLang) {
         const elements = document.querySelectorAll('[data-translate]');
         elements.forEach(element => {
             const key = element.getAttribute('data-translate');
             let translation = null;
 
-            // Chercher dans les traductions de page
+            // 1. Chercher dans les traductions de page d'abord
             if (pageTranslations[lang] && pageTranslations[lang][key]) {
                 translation = pageTranslations[lang][key];
             }
-            // Puis dans les traductions communes
+            // 2. Puis dans les traductions communes
             else if (this.commonTranslations[lang] && this.commonTranslations[lang][key]) {
                 translation = this.commonTranslations[lang][key];
             }
@@ -310,16 +379,22 @@ class TranslationManager {
         });
     }
 
-    // Animation de traduction
     animateTranslation(element, text) {
         element.classList.add('translating');
         setTimeout(() => {
-            element.textContent = text;
+            // Gérer les éléments input
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = text;
+            } else {
+                element.textContent = text;
+            }
             element.classList.remove('translating');
         }, 150);
     }
 
-    // Changer de langue
+    // ========================================
+    // CHANGEMENT DE LANGUE
+    // ========================================
     async switchLanguage(lang) {
         if (lang === this.currentLang || this.isTranslating) return;
 
@@ -333,45 +408,77 @@ class TranslationManager {
             this.storeLanguage(lang);
             this.updateLanguageButtons();
             
-            // Événement personnalisé
+            // Mettre à jour le titre de la page si applicable
+            const titleElement = document.querySelector('title[data-translate]');
+            if (titleElement) {
+                const key = titleElement.getAttribute('data-translate');
+                if (this.commonTranslations[lang] && this.commonTranslations[lang][key]) {
+                    titleElement.textContent = this.commonTranslations[lang][key];
+                }
+            }
+            
+            // Événement personnalisé pour les pages spécifiques
             const event = new CustomEvent('languageChanged', {
                 detail: { language: lang }
             });
             document.dispatchEvent(event);
             
-            // Traduire
+            // Traduire les éléments communs
             this.translateCommonElements();
 
             console.log(`✅ Language changed to: ${lang}`);
 
         } catch (error) {
-            console.error('Translation error:', error);
+            console.error('❌ Translation error:', error);
         } finally {
             this.isTranslating = false;
         }
     }
 
-    // Enregistrer les traductions de page
+    // ========================================
+    // ENREGISTREMENT DES TRADUCTIONS DE PAGE
+    // ========================================
     registerPageTranslations(pageTranslations) {
+        // Écouter les changements de langue
         document.addEventListener('languageChanged', (event) => {
             this.translateWithPageTranslations(pageTranslations, event.detail.language);
         });
 
+        // Traduire immédiatement avec la langue actuelle
         this.translateWithPageTranslations(pageTranslations, this.currentLang);
+        
+        console.log('📄 Page translations registered');
     }
 
-    // Obtenir la langue actuelle
+    // ========================================
+    // UTILITAIRES
+    // ========================================
     getCurrentLanguage() {
         return this.currentLang;
     }
+    
+    getTranslation(key, lang = this.currentLang) {
+        return this.commonTranslations[lang]?.[key] || key;
+    }
 }
 
-// Créer l'instance globale
+// ========================================
+// CRÉATION DE L'INSTANCE GLOBALE
+// ========================================
 window.translator = new TranslationManager();
 
-// Fonction globale pour compatibilité
+// ========================================
+// FONCTION GLOBALE POUR COMPATIBILITÉ
+// ========================================
 function changeLanguage(lang) {
     if (window.translator) {
         window.translator.switchLanguage(lang);
     }
+}
+
+// ========================================
+// EXPORT POUR UTILISATION DANS D'AUTRES SCRIPTS
+// ========================================
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = TranslationManager;
 }
